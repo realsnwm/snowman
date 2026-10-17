@@ -1,0 +1,24 @@
+{
+  "accent": "#7c8cff",
+  "theme": "dark",
+  "hidden": ["hero", "contact"],
+  "hero": {"name": "Snowman", "title": "Roblox tester, moderator and server manager", "intro": "QA testing, moderation and community management.", "image": "", "cta": "See positions"},
+  "about": "Hey, welcome to my portfolio! Let me introduce myself. My name's Snowman, I'm a guy, and I've always been curious about Roblox Development since a young age, which led to me being curious about everything around Roblox Games (Management, Development, Moderation, Testing) and more! I've now shifted to Server Managing, Moderation and also QA Testing at some places, but I'm always happy to learn about new things. If you'd ever want to contact me, you can do so by sending me a DM via Discord, because that's where I'm the most active.\n\nFor Hire! @ctmo\n\n- Contributed to over 50M visits! (through Testing)\n- Experienced Moderator & Manager",
+  "current": [
+    {"title": "Anime Crossovers", "role": "Head Administrator"},
+    {"title": "Last Stop", "role": "Helper & Tester"},
+    {"title": "The Sail", "role": "Tester"},
+    {"title": "Kaizen", "role": "Tester"},
+    {"title": "A Bizarre Run", "role": "Tester"},
+    {"title": "Vetra (Discord Bot)", "role": "Product Team (QA Tester)"}
+  ],
+  "former": [
+    {"title": "Beast Clicker", "role": "Tester"},
+    {"title": "Adopt A Brainrot", "role": "Tester"},
+    {"title": "Cut Trees For Brainrots", "role": "Tester"},
+    {"title": "Anime Invasion", "role": "Tester"},
+    {"title": "Last Stop", "role": "Trial Moderator"},
+    {"title": "A few Discord servers (+6,000 members)", "role": "Server Manager"}
+  ],
+  "contact": {"email": "", "links": [{"label": "Discord: @ctmo", "url": "#"}]}
+}
