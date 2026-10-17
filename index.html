@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Snowman | Portfolio</title>
+    <meta name="description" content="Snowman portfolio website" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a href="#hero" class="brand">Snowman</a>
+        <nav class="nav" aria-label="Main navigation">
+          <a href="#hero">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button id="theme-toggle" class="icon-button" type="button" aria-label="Toggle theme">☀️</button>
+      </div>
+    </header>
+
+    <aside id="edit-toolbar" class="edit-toolbar hidden" aria-live="polite" aria-hidden="true">
+      <div class="container toolbar-inner">
+        <div class="toolbar-group">
+          <strong>Edit mode</strong>
+        </div>
+
+        <div class="toolbar-group toolbar-controls">
+          <label class="toolbar-field">
+            Accent
+            <input id="accent-picker" type="color" value="#0b7cff" />
+          </label>
+
+          <label class="toolbar-field">
+            Default
+            <select id="default-scheme">
+              <option value="auto">Auto</option>
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+            </select>
+          </label>
+
+          <button type="button" id="visibility-toggle" class="toolbar-button">Visibility</button>
+          <button type="button" id="undo" class="toolbar-button">Undo</button>
+          <button type="button" id="redo" class="toolbar-button">Redo</button>
+          <button type="button" id="reset-published" class="toolbar-button">Reset</button>
+          <button type="button" id="export" class="toolbar-button">Export</button>
+          <button type="button" id="import" class="toolbar-button">Import</button>
+          <button type="button" id="repo-settings" class="toolbar-button">Repo</button>
+          <button type="button" id="publish" class="toolbar-button accent-button">Publish</button>
+          <button type="button" id="exit-edit" class="toolbar-button">Exit</button>
+        </div>
+
+        <div id="save-status" class="save-status" aria-live="polite">Saved</div>
+      </div>
+    </aside>
+
+    <main>
+      <section id="hero" class="section hero-section">
+        <div class="container hero-layout">
+          <div class="hero-copy">
+            <p class="eyebrow">Hello, I’m</p>
+            <h1 id="hero-name" data-field="hero.name">Snowman</h1>
+            <p id="hero-title" class="hero-title" data-field="hero.title">Roblox Community Manager & QA Tester</p>
+            <p id="hero-intro" data-field="hero.intro">I build communities, run events, and keep games feeling polished.</p>
+            <a id="hero-cta" class="button-primary" href="#contact" data-field="hero.cta.text">Get in touch</a>
+          </div>
+          <div class="hero-visual">
+            <img id="profile-image" src="" alt="Snowman profile" data-image-target="hero.image" />
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <h2>About</h2>
+          <p id="about-text" data-field="about.text">I am a game-focused community manager and QA tester.</p>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Projects</h2>
+            <button type="button" class="small-button add-button" id="add-project">Add project</button>
+          </div>
+          <div id="projects-list" class="cards-grid"></div>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Skills</h2>
+            <button type="button" class="small-button add-button" id="add-skill">Add skill</button>
+          </div>
+          <div id="skills-list" class="tag-list"></div>
+        </div>
+      </section>
+
+      <section id="experience" class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Experience</h2>
+            <button type="button" class="small-button add-button" id="add-experience">Add experience</button>
+          </div>
+          <div id="experience-list" class="experience-list"></div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Contact</h2>
+            <button type="button" class="small-button add-button" id="add-social">Add social</button>
+          </div>
+          <p>Email: <a id="contact-email" href="mailto:you@example.com">you@example.com</a></p>
+          <ul id="social-list" class="social-list"></ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© <span id="footer-year"></span> Snowman</p>
+      </div>
+    </footer>
+
+    <dialog id="repo-dialog" aria-labelledby="repo-dialog-title">
+      <form method="dialog" class="dialog-form">
+        <h3 id="repo-dialog-title">Repository settings</h3>
+        <label>
+          Owner / Repo
+          <input id="repo-input" type="text" placeholder="username/repo" />
+        </label>
+        <div class="dialog-actions">
+          <button type="submit" class="button-primary">Save</button>
+          <button type="button" class="button-secondary" id="repo-cancel">Cancel</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="visibility-dialog" aria-labelledby="visibility-dialog-title">
+      <form method="dialog" class="dialog-form">
+        <h3 id="visibility-dialog-title">Section visibility</h3>
+        <div id="visibility-options" class="visibility-options"></div>
+        <div class="dialog-actions">
+          <button type="submit" class="button-primary">Done</button>
+        </div>
+      </form>
+    </dialog>
+
+    <input id="import-file" type="file" accept="application/json" hidden />
+
+    <script src="app.js" defer></script>
+  </body>
+</html>

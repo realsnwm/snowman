@@ -1,0 +1,1017 @@
+const STORAGE_KEY = 'snowman_portfolio_draft';
+const TOKEN_KEY = 'snowman_portfolio_token';
+const HISTORY_LIMIT = 50;
+
+const fallbackContent = {
+  hero: {
+    name: 'Snowman',
+    title: 'Roblox Community Manager & QA Tester',
+    intro: 'I build communities, run events, and make games feel polished through thoughtful moderation, testing, and player support.',
+    image: '',
+    cta: { text: 'Get in touch', link: '#contact' }
+  },
+  about: {
+    text: 'I am a game-focused community manager and QA tester with a passion for player experience, retention, and building quality systems that feel smooth for players and staff alike.'
+  },
+  projects: [
+    {
+      title: 'Admin Tools Dashboard',
+      description: 'A moderation and admin dashboard for staff workflows, server management, and player support logs.',
+      image: '',
+      link: 'https://example.com/admin-tools',
+      tags: ['Roblox', 'Tools', 'Moderation']
+    },
+    {
+      title: 'Live QA Playbook',
+      description: 'A documented testing process for regressions, launch checks, and bug triage across multiple game updates.',
+      image: '',
+      link: 'https://example.com/qa-playbook',
+      tags: ['QA', 'Testing', 'Process']
+    }
+  ],
+  skills: ['Community Management', 'Quality Assurance', 'Moderation', 'Lua', 'Player Support'],
+  experience: [
+    {
+      role: 'Community Manager',
+      organisation: 'Cool Studio',
+      dates: '2022 — Present',
+      description: 'Manage community channels, launch events, and support player feedback loops that improve retention and trust.'
+    },
+    {
+      role: 'QA Tester',
+      organisation: 'North Star Games',
+      dates: '2020 — 2022',
+      description: 'Tested live builds, tracked bugs with clear reproduction notes, and collaborated with designers to improve gameplay polish.'
+    }
+  ],
+  contact: {
+    email: 'hello@example.com',
+    social: [
+      { label: 'GitHub', url: 'https://github.com/' },
+      { label: 'LinkedIn', url: 'https://linkedin.com/' },
+      { label: 'X / Twitter', url: 'https://x.com/' }
+    ]
+  },
+  meta: {
+    accent: '#0b7cff',
+    scheme: 'auto',
+    visible: {
+      hero: true,
+      about: true,
+      projects: true,
+      skills: true,
+      experience: true,
+      contact: true
+    }
+  }
+};
+
+const state = {
+  published: null,
+  draft: null,
+  isEditMode: false,
+  undoStack: [],
+  redoStack: []
+};
+
+const elements = {
+  toolbar: document.getElementById('edit-toolbar'),
+  saveStatus: document.getElementById('save-status'),
+  accentPicker: document.getElementById('accent-picker'),
+  defaultScheme: document.getElementById('default-scheme'),
+  themeToggle: document.getElementById('theme-toggle'),
+  ipFile: document.getElementById('import-file'),
+  repoDialog: document.getElementById('repo-dialog'),
+  repoInput: document.getElementById('repo-input'),
+  visibilityDialog: document.getElementById('visibility-dialog'),
+  visibilityOptions: document.getElementById('visibility-options'),
+  footerYear: document.getElementById('footer-year')
+};
+
+function deepClone(value) {
+  return JSON.parse(JSON.stringify(value));
+}
+
+function escapeText(value) {
+  return String(value ?? '').replace(/[&<>"']/g, (char) => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;'
+  }[char]));
+}
+
+function normalizeContent(raw) {
+  const base = deepClone(fallbackContent);
+  if (!raw || typeof raw !== 'object') return base;
+  return {
+    hero: { ...base.hero, ...(raw.hero || {}) , cta: { ...base.hero.cta, ...(raw.hero && raw.hero.cta ? raw.hero.cta : {}) } },
+    about: { ...base.about, ...(raw.about || {}) },
+    projects: Array.isArray(raw.projects) ? raw.projects.map((project, index) => ({
+      title: project?.title ?? `Project ${index + 1}`,
+      description: project?.description ?? '',
+      image: project?.image ?? '',
+      link: project?.link ?? '#',
+      tags: Array.isArray(project?.tags) ? project.tags : []
+    })) : base.projects,
+    skills: Array.isArray(raw.skills) ? raw.skills.map(String) : base.skills,
+    experience: Array.isArray(raw.experience) ? raw.experience.map((item) => ({
+      role: item?.role ?? 'Role',
+      organisation: item?.organisation ?? 'Organisation',
+      dates: item?.dates ?? 'Dates',
+      description: item?.description ?? ''
+    })) : base.experience,
+    contact: {
+      email: raw.contact?.email ?? base.contact.email,
+      social: Array.isArray(raw.contact?.social) ? raw.contact.social.map((item) => ({
+        label: item?.label ?? 'Link',
+        url: item?.url ?? '#'
+      })) : base.contact.social
+    },
+    meta: {
+      accent: raw.meta?.accent ?? base.meta.accent,
+      scheme: raw.meta?.scheme ?? base.meta.scheme,
+      visible: { ...base.meta.visible, ...(raw.meta?.visible || {}) }
+    }
+  };
+}
+
+function markSaved(message = 'Saved locally') {
+  elements.saveStatus.textContent = message;
+}
+
+function markUnsaved() {
+  elements.saveStatus.textContent = 'Unsaved changes';
+}
+
+async function loadPublishedContent() {
+  try {
+    const response = await fetch('content.json', { cache: 'no-store' });
+    if (!response.ok) throw new Error('Failed to load');
+    const json = await response.json();
+    const normalized = normalizeContent(json);
+    state.published = normalized;
+    return normalized;
+  } catch (error) {
+    console.warn('content.json could not be loaded; falling back to defaults.', error);
+    state.published = deepClone(fallbackContent);
+    return deepClone(fallbackContent);
+  }
+}
+
+function loadDraft() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw);
+    return normalizeContent(parsed);
+  } catch (error) {
+    console.warn('Could not parse draft from localStorage.', error);
+    return null;
+  }
+}
+
+function persistDraft() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state.draft));
+  markSaved('Saved locally');
+}
+
+function pushHistory() {
+  const snapshot = JSON.stringify(state.draft);
+  if (state.undoStack[state.undoStack.length - 1] === snapshot) return;
+  state.undoStack.push(snapshot);
+  if (state.undoStack.length > HISTORY_LIMIT) state.undoStack.shift();
+  state.redoStack = [];
+}
+
+function undo() {
+  if (!state.undoStack.length) return;
+  const current = JSON.stringify(state.draft);
+  state.redoStack.push(current);
+  state.undoStack.pop();
+  const previous = state.undoStack[state.undoStack.length - 1];
+  if (!previous) {
+    state.draft = deepClone(state.published);
+  } else {
+    state.draft = JSON.parse(previous);
+  }
+  render();
+  markUnsaved();
+}
+
+function redo() {
+  if (!state.redoStack.length) return;
+  const current = JSON.stringify(state.draft);
+  state.undoStack.push(current);
+  const next = state.redoStack.pop();
+  state.draft = JSON.parse(next);
+  render();
+  markUnsaved();
+}
+
+function applyThemeFromState() {
+  const mode = state.draft.meta.scheme || 'auto';
+  const root = document.documentElement;
+  root.setAttribute('data-theme', 'dark');
+
+  if (mode === 'light') {
+    root.setAttribute('data-theme', 'light');
+    return;
+  }
+
+  if (mode === 'dark') {
+    root.setAttribute('data-theme', 'dark');
+    return;
+  }
+
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  root.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+}
+
+function setManualTheme(value) {
+  const root = document.documentElement;
+  if (value === 'light' || value === 'dark') {
+    root.setAttribute('data-theme', value);
+  } else {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    root.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+  }
+}
+
+function setupThemeToggle() {
+  const mode = state.draft.meta.scheme || 'auto';
+  const isDark = mode === 'dark' || (mode === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  elements.themeToggle.textContent = isDark ? '🌙' : '☀️';
+
+  elements.themeToggle.addEventListener('click', () => {
+    const currentMode = state.draft.meta.scheme || 'auto';
+    let next;
+
+    if (currentMode === 'auto') {
+      next = 'dark';
+    } else if (currentMode === 'dark') {
+      next = 'light';
+    } else {
+      next = 'auto';
+    }
+
+    state.draft.meta.scheme = next;
+    localStorage.setItem('portfolio_theme_default', next);
+    applyThemeFromState();
+    elements.defaultScheme.value = next;
+    markUnsaved();
+    queueAutosave();
+  });
+}
+
+function renderSectionVisibilityControls() {
+  const visible = state.draft.meta.visible || {};
+  const sectionNames = [
+    { key: 'hero', label: 'Hero' },
+    { key: 'about', label: 'About' },
+    { key: 'projects', label: 'Projects' },
+    { key: 'skills', label: 'Skills' },
+    { key: 'experience', label: 'Experience' },
+    { key: 'contact', label: 'Contact' }
+  ];
+
+  elements.visibilityOptions.innerHTML = '';
+  sectionNames.forEach(({ key, label }) => {
+    const row = document.createElement('label');
+    row.className = 'visibility-option';
+
+    const name = document.createElement('span');
+    name.textContent = label;
+
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.checked = visible[key] !== false;
+    checkbox.addEventListener('change', () => {
+      state.draft.meta.visible[key] = checkbox.checked;
+      render();
+      markUnsaved();
+      queueAutosave();
+    });
+
+    row.append(name, checkbox);
+    elements.visibilityOptions.appendChild(row);
+  });
+}
+
+function render() {
+  const draft = state.draft;
+  if (!draft) return;
+
+  document.documentElement.style.setProperty('--accent', draft.meta.accent || '#0b7cff');
+  elements.accentPicker.value = draft.meta.accent || '#0b7cff';
+  elements.defaultScheme.value = draft.meta.scheme || 'auto';
+  applyThemeFromState();
+
+  const visible = draft.meta.visible || {};
+  ['hero', 'about', 'projects', 'skills', 'experience', 'contact'].forEach((sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (!section) return;
+    section.classList.toggle('hidden', visible[sectionId] === false);
+  });
+
+  const heroName = document.getElementById('hero-name');
+  heroName.textContent = draft.hero.name || '';
+
+  const heroTitle = document.getElementById('hero-title');
+  heroTitle.textContent = draft.hero.title || '';
+
+  const heroIntro = document.getElementById('hero-intro');
+  heroIntro.textContent = draft.hero.intro || '';
+
+  const heroCta = document.getElementById('hero-cta');
+  heroCta.textContent = draft.hero.cta?.text || 'Get in touch';
+  heroCta.href = draft.hero.cta?.link || '#contact';
+
+  const profileImage = document.getElementById('profile-image');
+  profileImage.src = draft.hero.image || '';
+  profileImage.alt = `${draft.hero.name || 'Profile'} portrait`;
+
+  const aboutText = document.getElementById('about-text');
+  aboutText.textContent = draft.about.text || '';
+
+  renderProjects();
+  renderSkills();
+  renderExperience();
+  renderContact();
+
+  elements.footerYear.textContent = new Date().getFullYear();
+  renderSectionVisibilityControls();
+  updateEditState();
+}
+
+function renderProjects() {
+  const list = document.getElementById('projects-list');
+  list.innerHTML = '';
+
+  draftForEach('projects', (project, index) => {
+    const card = document.createElement('article');
+    card.className = 'project-card';
+    card.dataset.index = String(index);
+
+    const image = document.createElement('img');
+    image.src = project.image || '';
+    image.alt = `${project.title || 'Project'} illustration`;
+    image.dataset.imageTarget = `projects.${index}.image`;
+    if (state.isEditMode) image.classList.add('editable-image');
+
+    const title = document.createElement('h3');
+    title.textContent = project.title || 'Untitled project';
+    title.setAttribute('data-list-field', `projects.${index}.title`);
+
+    const desc = document.createElement('p');
+    desc.textContent = project.description || '';
+    desc.setAttribute('data-list-field', `projects.${index}.description`);
+
+    const tags = document.createElement('div');
+    tags.className = 'tag-list';
+    (project.tags || []).forEach((tag) => {
+      const span = document.createElement('span');
+      span.className = 'skill-tag';
+      span.textContent = tag;
+      tags.appendChild(span);
+    });
+
+    const link = document.createElement('a');
+    link.href = safeUrl(project.link || '#');
+    link.target = '_blank';
+    link.rel = 'noreferrer';
+    link.textContent = 'View project';
+    link.className = 'button-secondary';
+
+    const controls = document.createElement('div');
+    controls.className = 'list-controls';
+
+    if (state.isEditMode) {
+      const up = createMiniButton('↑', () => moveItem('projects', index, -1));
+      const down = createMiniButton('↓', () => moveItem('projects', index, 1));
+      const del = createMiniButton('Delete', () => deleteItem('projects', index));
+      controls.append(up, down, del);
+    }
+
+    card.append(image, title, desc, tags, link, controls);
+    list.appendChild(card);
+  });
+}
+
+function renderSkills() {
+  const list = document.getElementById('skills-list');
+  list.innerHTML = '';
+
+  draftForEach('skills', (skill, index) => {
+    const tag = document.createElement('span');
+    tag.className = 'skill-tag';
+    tag.textContent = skill || ''; 
+    tag.dataset.index = String(index);
+    tag.setAttribute('data-list-field', `skills.${index}`);
+
+    const controls = document.createElement('div');
+    controls.className = 'inline-controls';
+    if (state.isEditMode) {
+      const up = createMiniButton('↑', () => moveItem('skills', index, -1));
+      const down = createMiniButton('↓', () => moveItem('skills', index, 1));
+      const del = createMiniButton('Delete', () => deleteItem('skills', index));
+      controls.append(up, down, del);
+      tag.appendChild(controls);
+    }
+
+    list.appendChild(tag);
+  });
+}
+
+function renderExperience() {
+  const list = document.getElementById('experience-list');
+  list.innerHTML = '';
+
+  draftForEach('experience', (item, index) => {
+    const el = document.createElement('article');
+    el.className = 'experience-item';
+    el.dataset.index = String(index);
+
+    const header = document.createElement('h3');
+    header.textContent = `${item.role || 'Role'} — ${item.organisation || 'Organisation'}`;
+    header.setAttribute('data-list-field', `experience.${index}.role`);
+
+    const meta = document.createElement('div');
+    meta.className = 'experience-meta';
+    meta.textContent = item.dates || 'Dates';
+    meta.setAttribute('data-list-field', `experience.${index}.dates`);
+
+    const desc = document.createElement('p');
+    desc.textContent = item.description || '';
+    desc.setAttribute('data-list-field', `experience.${index}.description`);
+
+    const controls = document.createElement('div');
+    controls.className = 'list-controls';
+    if (state.isEditMode) {
+      const up = createMiniButton('↑', () => moveItem('experience', index, -1));
+      const down = createMiniButton('↓', () => moveItem('experience', index, 1));
+      const del = createMiniButton('Delete', () => deleteItem('experience', index));
+      controls.append(up, down, del);
+    }
+
+    el.append(header, meta, desc, controls);
+    list.appendChild(el);
+  });
+}
+
+function renderContact() {
+  const emailLink = document.getElementById('contact-email');
+  emailLink.textContent = state.draft.contact.email || '';
+  emailLink.href = `mailto:${(state.draft.contact.email || '').trim()}`;
+
+  const list = document.getElementById('social-list');
+  list.innerHTML = '';
+
+  draftForEach('contact.social', (item, index) => {
+    const li = document.createElement('li');
+    li.className = 'social-item';
+    li.dataset.index = String(index);
+
+    const link = document.createElement('a');
+    link.href = safeUrl(item.url || '#');
+    link.target = '_blank';
+    link.rel = 'noreferrer';
+    link.textContent = item.label || 'Link';
+    link.setAttribute('data-list-field', `contact.social.${index}.label`);
+
+    const controls = document.createElement('div');
+    controls.className = 'inline-controls';
+    if (state.isEditMode) {
+      const up = createMiniButton('↑', () => moveItem('contact.social', index, -1));
+      const down = createMiniButton('↓', () => moveItem('contact.social', index, 1));
+      const del = createMiniButton('Delete', () => deleteItem('contact.social', index));
+      controls.append(up, down, del);
+    }
+
+    li.append(link, controls);
+    list.appendChild(li);
+  });
+}
+
+function draftForEach(path, callback) {
+  const arr = path.split('.').reduce((acc, key) => acc && acc[key], state.draft);
+  if (!Array.isArray(arr)) return;
+  arr.forEach((item, index) => callback(item, index));
+}
+
+function createMiniButton(label, fn) {
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'mini-button';
+  button.textContent = label;
+  button.addEventListener('click', (event) => {
+    event.preventDefault();
+    fn();
+  });
+  return button;
+}
+
+function safeUrl(value) {
+  if (!value) return '#';
+  const cleaned = String(value).trim();
+  if (/^(https?:|mailto:|#)/i.test(cleaned)) return cleaned;
+  if (cleaned.startsWith('//')) return `https:${cleaned}`;
+  return cleaned.startsWith('/') ? cleaned : `https://${cleaned}`;
+}
+
+function setEditableFields() {
+  const editable = document.querySelectorAll('[data-field]');
+  editable.forEach((element) => {
+    element.contentEditable = state.isEditMode ? 'true' : 'false';
+    element.spellcheck = false;
+    element.dataset.plainText = 'true';
+    element.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' && !event.shiftKey && element.tagName !== 'TEXTAREA') {
+        event.preventDefault();
+        element.blur();
+      }
+    });
+    element.addEventListener('paste', (event) => {
+      event.preventDefault();
+      const text = (event.clipboardData || window.clipboardData).getData('text/plain');
+      document.execCommand('insertText', false, text);
+    });
+    element.addEventListener('input', () => {
+      const field = element.dataset.field;
+      if (!field) return;
+      updateFieldFromPath(field, element.textContent.trim());
+      markUnsaved();
+      queueAutosave();
+    });
+  });
+
+  // Allow edits for list fields like projects titles and descriptions.
+  const listFields = document.querySelectorAll('[data-list-field]');
+  listFields.forEach((element) => {
+    element.contentEditable = state.isEditMode ? 'true' : 'false';
+    element.spellcheck = false;
+    element.addEventListener('paste', (event) => {
+      event.preventDefault();
+      const text = (event.clipboardData || window.clipboardData).getData('text/plain');
+      document.execCommand('insertText', false, text);
+    });
+    element.addEventListener('input', () => {
+      const field = element.dataset.listField;
+      updateFieldFromPath(field, element.textContent.trim());
+      markUnsaved();
+      queueAutosave();
+    });
+  });
+
+  const imageTargets = document.querySelectorAll('[data-image-target]');
+  imageTargets.forEach((img) => {
+    if (state.isEditMode) {
+      img.style.cursor = 'pointer';
+      img.title = 'Click to replace image';
+      img.addEventListener('click', () => askForImage(img.dataset.imageTarget));
+    } else {
+      img.style.cursor = 'default';
+      img.title = '';
+      img.onclick = null;
+    }
+  });
+}
+
+function updateEditState() {
+  setEditableFields();
+  const listControls = document.querySelectorAll('.list-controls, .inline-controls');
+  listControls.forEach((controls) => {
+    if (state.isEditMode) {
+      controls.classList.remove('hidden');
+    } else {
+      controls.classList.add('hidden');
+    }
+  });
+
+  const addButtons = document.querySelectorAll('.add-button');
+  addButtons.forEach((button) => {
+    button.classList.toggle('hidden', !state.isEditMode);
+  });
+}
+
+function updateFieldFromPath(path, value) {
+  const keys = path.split('.');
+  let current = state.draft;
+  for (let i = 0; i < keys.length - 1; i += 1) {
+    current = current[keys[i]];
+  }
+  const lastKey = keys[keys.length - 1];
+  current[lastKey] = value;
+}
+
+function moveItem(path, index, direction) {
+  const keys = path.split('.');
+  let source = state.draft;
+  for (const key of keys) source = source[key];
+
+  const newIndex = index + direction;
+  if (newIndex < 0 || newIndex >= source.length) return;
+
+  [source[index], source[newIndex]] = [source[newIndex], source[index]];
+  render();
+  markUnsaved();
+  queueAutosave();
+}
+
+function deleteItem(path, index) {
+  const keys = path.split('.');
+  let collection = state.draft;
+  for (const key of keys.slice(0, -1)) collection = collection[key];
+  const lastKey = keys[keys.length - 1];
+  collection[lastKey].splice(index, 1);
+  render();
+  markUnsaved();
+  queueAutosave();
+}
+
+function addProject() {
+  state.draft.projects.push({
+    title: 'New project',
+    description: 'Describe the project',
+    image: '',
+    link: '#',
+    tags: ['New']
+  });
+  render();
+  markUnsaved();
+  queueAutosave();
+}
+
+function addSkill() {
+  state.draft.skills.push('New skill');
+  render();
+  markUnsaved();
+  queueAutosave();
+}
+
+function addExperience() {
+  state.draft.experience.push({
+    role: 'New role',
+    organisation: 'Organisation',
+    dates: 'Dates',
+    description: 'Add a concise summary of your role.'
+  });
+  render();
+  markUnsaved();
+  queueAutosave();
+}
+
+function addSocial() {
+  state.draft.contact.social.push({ label: 'New link', url: 'https://example.com' });
+  render();
+  markUnsaved();
+  queueAutosave();
+}
+
+function queueAutosave() {
+  clearTimeout(window._autosaveTimer);
+  window._autosaveTimer = setTimeout(() => {
+    persistDraft();
+  }, 500);
+}
+
+function enableEditMode() {
+  state.isEditMode = true;
+  elements.toolbar.classList.remove('hidden');
+  elements.toolbar.setAttribute('aria-hidden', 'false');
+  window.location.hash = 'edit';
+  render();
+}
+
+function exitEditMode() {
+  state.isEditMode = false;
+  elements.toolbar.classList.add('hidden');
+  elements.toolbar.setAttribute('aria-hidden', 'true');
+  window.location.hash = '';
+  render();
+}
+
+async function askForImage(path) {
+  const url = window.prompt('Enter a direct image URL. Leave empty to upload a file.', '');
+  if (url && url.trim()) {
+    setImageAtPath(path, url.trim());
+    return;
+  }
+
+  const fileInput = document.createElement('input');
+  fileInput.type = 'file';
+  fileInput.accept = 'image/*';
+  fileInput.addEventListener('change', async () => {
+    const file = fileInput.files && fileInput.files[0];
+    if (!file) return;
+    const dataUrl = await fileToCompressedDataUrl(file, 1200, 0.8);
+    setImageAtPath(path, dataUrl);
+  });
+  fileInput.click();
+}
+
+function setImageAtPath(path, value) {
+  const keys = path.split('.');
+  let current = state.draft;
+  for (let i = 0; i < keys.length - 1; i += 1) {
+    current = current[keys[i]];
+  }
+  current[keys[keys.length - 1]] = value;
+  render();
+  markUnsaved();
+  queueAutosave();
+}
+
+async function fileToCompressedDataUrl(file, maxWidth = 1200, quality = 0.8) {
+  const dataUrl = await readFileAsDataUrl(file);
+  const img = await loadImage(dataUrl);
+  const ratio = Math.min(1, maxWidth / img.width);
+  const width = Math.max(1, Math.round(img.width * ratio));
+  const height = Math.max(1, Math.round(img.height * ratio));
+
+  const canvas = document.createElement('canvas');
+  canvas.width = width;
+  canvas.height = height;
+
+  const ctx = canvas.getContext('2d');
+  ctx.drawImage(img, 0, 0, width, height);
+  return canvas.toDataURL('image/jpeg', quality);
+}
+
+function readFileAsDataUrl(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = () => reject(new Error('Could not read the uploaded file.'));
+    reader.readAsDataURL(file);
+  });
+}
+
+function loadImage(dataUrl) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => resolve(img);
+    img.onerror = () => reject(new Error('Could not decode the image.'));
+    img.src = dataUrl;
+  });
+}
+
+function exportContent() {
+  const blob = new Blob([JSON.stringify(state.draft, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const anchor = document.createElement('a');
+  anchor.href = url;
+  anchor.download = 'content.json';
+  document.body.appendChild(anchor);
+  anchor.click();
+  anchor.remove();
+  URL.revokeObjectURL(url);
+}
+
+function importContent(file) {
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      const parsed = JSON.parse(String(reader.result));
+      const normalized = normalizeContent(parsed);
+      state.draft = normalized;
+      render();
+      markUnsaved();
+      queueAutosave();
+    } catch (error) {
+      alert('This file is not valid JSON or is not in the expected structure.');
+    }
+  };
+  reader.readAsText(file);
+}
+
+function detectRepoFromUrl() {
+  const host = window.location.hostname.toLowerCase();
+  const pathname = window.location.pathname.replace(/^\/+|\/+$/g, '');
+
+  if (host.endsWith('github.io')) {
+    const owner = host.replace('.github.io', '');
+    if (!pathname) return { owner, repo: owner };
+    const repo = pathname.split('/')[0];
+    return { owner, repo };
+  }
+
+  return null;
+}
+
+function getRepoOverride() {
+  const repoText = localStorage.getItem('snowman_repo_override');
+  if (repoText) return repoText;
+  return null;
+}
+
+function saveRepoOverride(value) {
+  localStorage.setItem('snowman_repo_override', value);
+}
+
+function openRepoDialog() {
+  const detected = detectRepoFromUrl() || { owner: '', repo: '' };
+  const override = getRepoOverride();
+  elements.repoInput.value = override || `${detected.owner || ''}/${detected.repo || ''}`;
+  elements.repoDialog.showModal();
+}
+
+function closeRepoDialog() {
+  elements.repoDialog.close();
+}
+
+async function resetToPublished() {
+  if (!state.published) {
+    state.published = await loadPublishedContent();
+  }
+  state.draft = deepClone(state.published);
+  render();
+  markUnsaved();
+  queueAutosave();
+}
+
+async function publishToGithub() {
+  const token = sessionStorage.getItem(TOKEN_KEY);
+  if (!token) {
+    const entered = window.prompt('Paste a fine-grained GitHub PAT with Contents: read and write for this repo only. It is stored in sessionStorage only.');
+    if (!entered) {
+      alert('Publish cancelled because no token was provided.');
+      return;
+    }
+    sessionStorage.setItem(TOKEN_KEY, entered.trim());
+  }
+
+  let repoOwner = '';
+  let repoName = '';
+  const override = getRepoOverride();
+  if (override) {
+    const parts = override.split('/');
+    repoOwner = parts[0];
+    repoName = parts[1];
+  } else {
+    const detected = detectRepoFromUrl();
+    if (detected) {
+      repoOwner = detected.owner;
+      repoName = detected.repo;
+    }
+  }
+
+  if (!repoOwner || !repoName) {
+    const input = window.prompt('Enter the repository in owner/repo format. Example: username/repo');
+    if (!input) {
+      alert('Repository information was not provided.');
+      return;
+    }
+    const parts = input.split('/');
+    repoOwner = parts[0];
+    repoName = parts[1];
+    saveRepoOverride(input.trim());
+  }
+
+  const url = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/content.json`;
+  try {
+    const existing = await fetch(url, {
+      method: 'GET',
+      headers: {
+        Authorization: `Bearer ${sessionStorage.getItem(TOKEN_KEY)}`,
+        Accept: 'application/vnd.github+json'
+      }
+    });
+
+    let sha = null;
+    if (existing.ok) {
+      const existingJson = await existing.json();
+      sha = existingJson.sha;
+    } else if (existing.status !== 404) {
+      const details = await existing.text();
+      throw new Error(`GitHub API check failed: ${existing.status} ${details}`);
+    }
+
+    const fileContent = JSON.stringify(state.draft, null, 2);
+    const encoded = btoa(unescape(encodeURIComponent(fileContent)));
+
+    const response = await fetch(url, {
+      method: 'PUT',
+      headers: {
+        Authorization: `Bearer ${sessionStorage.getItem(TOKEN_KEY)}`,
+        Accept: 'application/vnd.github+json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        message: 'Update portfolio content.json',
+        content: encoded,
+        sha: sha || undefined
+      })
+    });
+
+    if (!response.ok) {
+      const errorJson = await response.json();
+      throw new Error(errorJson.message || 'Publish failed.');
+    }
+
+    alert('Published successfully. GitHub Pages can take about a minute to redeploy.');
+    markSaved('Published');
+  } catch (error) {
+    console.error(error);
+    alert(`Publish failed: ${error.message}`);
+  }
+}
+
+function bindToolbarEvents() {
+  elements.accentPicker.addEventListener('input', (event) => {
+    state.draft.meta.accent = event.target.value;
+    render();
+    markUnsaved();
+    queueAutosave();
+  });
+
+  elements.defaultScheme.addEventListener('change', (event) => {
+    state.draft.meta.scheme = event.target.value;
+    applyThemeFromState();
+    markUnsaved();
+    queueAutosave();
+  });
+
+  document.getElementById('undo').addEventListener('click', () => {
+    undo();
+  });
+
+  document.getElementById('redo').addEventListener('click', () => {
+    redo();
+  });
+
+  document.getElementById('export').addEventListener('click', exportContent);
+  document.getElementById('import').addEventListener('click', () => elements.ipFile.click());
+  elements.ipFile.addEventListener('change', (event) => {
+    const file = event.target.files && event.target.files[0];
+    importContent(file);
+    event.target.value = '';
+  });
+
+  document.getElementById('publish').addEventListener('click', publishToGithub);
+  document.getElementById('reset-published').addEventListener('click', () => {
+    if (window.confirm('Reset to the published content.json?')) {
+      resetToPublished();
+    }
+  });
+
+  document.getElementById('exit-edit').addEventListener('click', exitEditMode);
+  document.getElementById('add-project').addEventListener('click', addProject);
+  document.getElementById('add-skill').addEventListener('click', addSkill);
+  document.getElementById('add-experience').addEventListener('click', addExperience);
+  document.getElementById('add-social').addEventListener('click', addSocial);
+
+  document.getElementById('repo-settings').addEventListener('click', openRepoDialog);
+  document.getElementById('repo-cancel').addEventListener('click', closeRepoDialog);
+  elements.repoDialog.addEventListener('close', () => {
+    const value = elements.repoInput.value.trim();
+    if (value) saveRepoOverride(value);
+  });
+
+  elements.repoDialog.querySelector('form').addEventListener('submit', (event) => {
+    event.preventDefault();
+    const value = elements.repoInput.value.trim();
+    if (value) saveRepoOverride(value);
+    closeRepoDialog();
+  });
+
+  document.getElementById('visibility-toggle').addEventListener('click', () => {
+    elements.visibilityDialog.showModal();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.ctrlKey && event.shiftKey && event.key.toLowerCase() === 'e') {
+      event.preventDefault();
+      if (state.isEditMode) {
+        exitEditMode();
+      } else {
+        enableEditMode();
+      }
+    }
+  });
+
+  if (window.location.hash.includes('edit')) {
+    enableEditMode();
+  }
+}
+
+async function init() {
+  const published = await loadPublishedContent();
+  const localDraft = loadDraft();
+  state.draft = localDraft || deepClone(published);
+  state.published = deepClone(published);
+  state.undoStack = [JSON.stringify(state.draft)];
+  state.redoStack = [];
+  applyThemeFromState();
+  render();
+  bindToolbarEvents();
+  setupThemeToggle();
+  elements.defaultScheme.value = state.draft.meta.scheme || 'auto';
+  elements.accentPicker.value = state.draft.meta.accent || '#0b7cff';
+  markSaved('Saved locally');
+}
+
+init();
