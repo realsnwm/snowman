@@ -48,7 +48,7 @@
     },
     {
       "label": "COMMUNITIES OR PROJECTS I HAVE HELPED IN",
-      "items": "Anime Crossovers, Last Stop, The Sail, Kaizen, A Bizarre Run, Vetra (Discord Bot), Beast Clicker, Adopt A Brainrot, Cut Trees For Brainrots, Anime Invasion, A few Discord servers (+6,000 members)",
+      "items": "Anime Crossovers, Last Stop, The Sail, Kaizen, A Bizarre Run, Vetra, Beast Clicker, Adopt A Brainrot, Cut Trees For Brainrots, Anime Invasion,",
       "id": "ticker",
       "hidden": false,
       "nav": "",
@@ -65,7 +65,7 @@
       "type": "text"
     },
     {
-      "eyebrow": "",
+      "eyebrow": "WHAT I'M WORKING ON",
       "title": "Current positions",
       "text": "",
       "layout": "carousel",
@@ -138,10 +138,10 @@
       "type": "cards"
     },
     {
-      "eyebrow": "",
+      "eyebrow": "WHAT I WORKED ON",
       "title": "Former positions",
       "text": "",
-      "layout": "grid",
+      "layout": "carousel",
       "cols": "2",
       "items": [
         {
@@ -219,7 +219,7 @@
       "form": "on",
       "rows": [
         {
-          "label": "Discord: @ctmo",
+          "label": "\n",
           "value": "Discord: @ctmo",
           "url": "#"
         }
