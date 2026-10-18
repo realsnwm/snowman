@@ -228,6 +228,13 @@
       "hidden": false,
       "nav": "Contact",
       "type": "contact"
+    },
+    {
+      "id": "bx9zuv",
+      "type": "notice",
+      "hidden": false,
+      "nav": "",
+      "text": "© Snowman"
     }
   ]
 }
