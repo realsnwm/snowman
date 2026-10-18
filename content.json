@@ -41,6 +41,13 @@
       "font": "Fira Code"
     }
   },
+  "seo": {
+    "title": "",
+    "desc": "",
+    "image": "",
+    "favicon": "",
+    "color": ""
+  },
   "integ": {
     "webhook": "",
     "formUrl": "",
@@ -114,7 +121,7 @@
         },
         {
           "value": "6,000+",
-          "label": "Members Moderated"
+          "label": "Members Managed"
         }
       ],
       "id": "bhx5bg",
@@ -302,7 +309,7 @@
     },
     {
       "text": "© Snowman, All rights reserved.",
-      "id": "bx9zuv",
+      "id": "Notice",
       "hidden": false,
       "nav": "",
       "type": "notice"
