@@ -38,7 +38,7 @@
       "chip": {
         "name": "Snowman",
         "handle": "@ctmo",
-        "status": "Offline",
+        "status": "",
         "image": ""
       },
       "id": "hero",
