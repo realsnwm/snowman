@@ -1,5 +1,5 @@
 {
-  "accent": "#10b981",
+  "accent": "#0e6c4d",
   "theme": "auto",
   "hidden": [],
   "design": {
@@ -88,19 +88,7 @@
     "links": [
       {
         "label": "Discord: @ctmo",
-        "url": "#"
-      },
-      {
-        "label": "Link",
-        "url": "https://"
-      },
-      {
-        "label": "Link",
-        "url": "https://"
-      },
-      {
-        "label": "Link",
-        "url": "https://"
+        "url": ""
       }
     ]
   }
