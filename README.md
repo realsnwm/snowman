@@ -1,26 +1,39 @@
-# Portfolio
+# Snowman — Advanced editable portfolio
 
-Static site: index.html, styles.css, app.js, content.json. No build step.
+This repository hosts a single-page portfolio that includes a powerful in-browser editor. The editor is intentionally feature-rich: everything in content.json is editable, you can upload images and fonts, tweak layout, colors, theme, and publish changes directly to this repository.
 
-## Deploy
-Repo Settings > Pages > Deploy from a branch > main, folder / (root). Keep the .nojekyll file.
+IMPORTANT: this project uses plain HTML, CSS and vanilla JavaScript. No build step, no CDNs.
 
-## Edit
-Open your site with `#edit` at the end of the URL (or press Ctrl+Shift+E). Click any text to change it. Use the toolbar for accent colour, default theme, section visibility, undo and redo. Changes autosave in this browser only until you publish.
+How to enable GitHub Pages
+- Go to the repository Settings → Pages
+- Branch: `main` and folder: `/ (root)`
+- Save. Wait ~60 seconds after publishing for Pages to redeploy.
 
-## Publish
-1. GitHub > Settings > Developer settings > Fine-grained tokens > Generate new token.
-2. Repository access: only this repo. Permissions: Contents, Read and write.
-3. In edit mode click Publish and paste the token. It stays in the tab (sessionStorage) and is never written to the repo.
-4. The editor commits content.json. Pages redeploys in about a minute.
+Entering edit mode
+- Open the site and add `#edit` to the URL, or press Ctrl+Shift+E. The editor toolbar will appear.
+- In edit mode every text field is editable in-place. Hidden blocks become visible but dimmed.
 
-Owner and repo are detected from the Pages URL. Use the Repo button to override.
+Key editor features
+- Everything editable: titles, paragraphs, cards, lists, contact rows, CTA buttons, section visibility, and more.
+- Deep customization: accent colour, theme (auto/light/dark), font choices, layout width, card radius, animations, and spotlight/background glow.
+- Upload fonts (woff/woff2/ttf) and images. Uploaded images are resized to a max width of 1200px and stored as compressed JPEG data URLs in content.json. Uploaded fonts are embedded via @font-face and stored in data.assets.fonts.
+- Undo/Redo with history saved to localStorage (many steps).
+- Export downloads the current content.json. Import validates a JSON file.
+- Publish commits the content.json to this repository using the GitHub REST API. You will be prompted for a fine-grained personal access token (Contents: read & write for this repo). The token is stored only in `sessionStorage` for the current tab.
 
-## Export and import
-Export downloads content.json. Import loads one back after a validity check. You can also commit a downloaded file by hand.
+Publishing (high level)
+1. In edit mode click Publish. Paste a fine-grained token created in GitHub Settings → Developer settings → Personal access tokens (fine-grained). Set repository access to this repo and enable Contents read & write.
+2. The editor will GET `/repos/{owner}/{repo}/contents/content.json` to obtain the file SHA and then PUT the updated file as base64 content with a commit message.
+3. On success, you will see a confirmation. Pages usually takes ~1 minute to redeploy.
 
-## Assumptions
-- Vanilla JS, no framework.
-- Uploaded images are resized to 1200px wide JPEGs and stored inside content.json, so keep them few.
-- Sections are About me, Current positions, Former positions and Contact. Hero and Contact are hidden by default; turn them on in edit mode (Sections menu).
-- Visitors can open edit mode but cannot publish without your token.
+Export & Import
+- Export: downloads the current content.json.
+- Import: choose a valid content.json and the editor will validate it before loading.
+
+Assumptions & notes
+- No external fonts or CDNs are used. Fonts can be uploaded to the editor and embedded into the page.
+- Uploaded images and fonts increase content.json size; GitHub has file size limits — keep large media usage minimal.
+- The editor stores drafts in localStorage under `portfolio-draft-v2` until you publish.
+- The token for publishing is stored only in sessionStorage and is cleared if GitHub responds with Bad credentials.
+
+If you want a narrower feature set or a more opinionated editor UI (instead of the "everything is editable" approach), tell me which areas to focus on and I will simplify or extend accordingly.
