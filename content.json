@@ -11,10 +11,25 @@
     "anim": true,
     "spot": true,
     "head": "tight",
+    "hsize": 100,
+    "bsize": 100,
+    "sg": 100,
+    "spd": 1,
+    "mqs": 40,
     "cols": 2
   },
+  "custom": {
+    "css": "",
+    "head": "",
+    "hfont": ""
+  },
+  "integ": {
+    "webhook": "",
+    "formUrl": "",
+    "plausible": ""
+  },
   "site": {
-    "brand": "snowman",
+    "brand": "Snowman's Portfolio",
     "footer": "",
     "cta": {
       "label": "@ctmo",
@@ -23,9 +38,9 @@
   },
   "blocks": [
     {
-      "eyebrow": "QA testing · Moderation · Server management",
+      "eyebrow": "SERVER MANAGEMENT · QA TESTING · MODERATION",
       "title": "Hi, I'm *Snowman*.",
-      "text": "QA Testing, Moderation and Community Management.",
+      "text": "Professional Community Manager, Moderator & QA Tester.",
       "btn1": {
         "label": "See positions",
         "url": "#current"
