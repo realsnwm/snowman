@@ -24,7 +24,7 @@
   "blocks": [
     {
       "eyebrow": "QA testing · Moderation · Server management",
-      "title": "Hi, I'm Snowman.",
+      "title": "Hi, I'm *Snowman*.",
       "text": "QA Testing, Moderation and Community Management.",
       "btn1": {
         "label": "See positions",
@@ -65,8 +65,28 @@
       "type": "text"
     },
     {
+      "id": "bhx5bg",
+      "type": "stats",
+      "hidden": false,
+      "nav": "",
+      "items": [
+        {
+          "value": "150M+",
+          "label": "Visits Contributed"
+        },
+        {
+          "value": "15,000",
+          "label": "Members Moderated"
+        },
+        {
+          "value": "6,000+",
+          "label": "Members Moderated"
+        }
+      ]
+    },
+    {
       "eyebrow": "WHAT I'M WORKING ON",
-      "title": "Current positions",
+      "title": "*Current* positions",
       "text": "",
       "layout": "grid",
       "cols": "2",
@@ -74,7 +94,7 @@
         {
           "eyebrow": "Head Administrator",
           "title": "Anime Crossovers",
-          "text": "",
+          "text": "-1,000 Members",
           "badge": "Active",
           "stat": "",
           "statLabel": "",
@@ -84,7 +104,7 @@
         {
           "eyebrow": "Helper & Tester",
           "title": "Last Stop",
-          "text": "",
+          "text": "14,000+ Members",
           "badge": "Active",
           "stat": "",
           "statLabel": "",
@@ -94,7 +114,7 @@
         {
           "eyebrow": "Tester",
           "title": "The Sail",
-          "text": "",
+          "text": "-1,000 Members",
           "badge": "Active",
           "stat": "",
           "statLabel": "",
@@ -104,7 +124,7 @@
         {
           "eyebrow": "Tester",
           "title": "Kaizen",
-          "text": "",
+          "text": "160,000+ Members",
           "badge": "Active",
           "stat": "",
           "statLabel": "",
@@ -114,7 +134,7 @@
         {
           "eyebrow": "Tester",
           "title": "A Bizarre Run",
-          "text": "",
+          "text": "148,000+ Members",
           "badge": "Active",
           "stat": "",
           "statLabel": "",
@@ -124,7 +144,7 @@
         {
           "eyebrow": "Product Team (QA Tester)",
           "title": "Vetra (Discord Bot)",
-          "text": "",
+          "text": "-1,000 Members",
           "badge": "Active",
           "stat": "",
           "statLabel": "",
@@ -139,7 +159,7 @@
     },
     {
       "eyebrow": "WHAT I WORKED ON",
-      "title": "Former positions",
+      "title": "*Former* positions",
       "text": "",
       "layout": "grid",
       "cols": "2",
@@ -196,8 +216,8 @@
         },
         {
           "eyebrow": "Server Manager",
-          "title": "A few Discord servers (+6,000 members)",
-          "text": "",
+          "title": "Other Servers",
+          "text": "\n",
           "badge": "Retired",
           "stat": "",
           "statLabel": "",
@@ -235,6 +255,35 @@
       "hidden": false,
       "nav": "",
       "text": "© Snowman"
+    },
+    {
+      "id": "bzaquk",
+      "type": "gallery",
+      "hidden": false,
+      "nav": "",
+      "eyebrow": "Design",
+      "title": "Custom *work*.",
+      "text": "Describe the work shown.",
+      "note": "Original work. All rights reserved.",
+      "cols": "4",
+      "items": [
+        {
+          "image": "",
+          "caption": ""
+        },
+        {
+          "image": "",
+          "caption": ""
+        },
+        {
+          "image": "",
+          "caption": ""
+        },
+        {
+          "image": "",
+          "caption": ""
+        }
+      ]
     }
   ]
 }
