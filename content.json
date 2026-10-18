@@ -85,7 +85,7 @@
       "layout": "split",
       "id": "about",
       "hidden": false,
-      "nav": "About",
+      "nav": "About Me",
       "type": "text"
     },
     {
@@ -178,7 +178,7 @@
       ],
       "id": "current",
       "hidden": false,
-      "nav": "Current positions",
+      "nav": "Current Positions",
       "type": "cards"
     },
     {
@@ -251,7 +251,7 @@
       ],
       "id": "former",
       "hidden": false,
-      "nav": "Former positions",
+      "nav": "Former Positions",
       "type": "cards"
     },
     {
