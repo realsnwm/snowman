@@ -80,8 +80,8 @@
       "type": "hero",
       "style": {
         "color": "",
-        "an": "up",
-        "ad": 0.5
+        "an": "fade",
+        "ad": 1
       }
     },
     {
@@ -121,6 +121,19 @@
       "hidden": false,
       "nav": "Stats",
       "type": "stats"
+    },
+    {
+      "label": "Biggest project",
+      "title": "*Kaizen*",
+      "sub": "QA Tester",
+      "text": "Looked for, identified, verified bugs and assisted Developers to ensure a smooth high-quality player experiences.",
+      "stat": "160K+",
+      "statLabel": "members",
+      "link": "",
+      "id": "b5fdm3",
+      "hidden": false,
+      "nav": "",
+      "type": "feature"
     },
     {
       "eyebrow": "WHAT I'M WORKING ON",
