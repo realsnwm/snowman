@@ -42,11 +42,11 @@
     }
   },
   "seo": {
-    "title": "",
-    "desc": "",
-    "image": "",
+    "title": "Snowman's Portfolio",
+    "desc": "Professional portfolio listing my experience throughout numerous projects. Made my myself.",
+    "image": "assets/mveeyfic1lfq.jpg",
     "favicon": "",
-    "color": ""
+    "color": "#00ffaa"
   },
   "integ": {
     "webhook": "",
