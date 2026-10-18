@@ -42,8 +42,8 @@
     }
   },
   "seo": {
-    "title": "",
-    "desc": "",
+    "title": "Snowman’s Portfolio",
+    "desc": "Professional portfolio listing my experience throughout numerous projects.",
     "image": "",
     "favicon": "",
     "color": ""
@@ -130,7 +130,7 @@
       "type": "stats"
     },
     {
-      "label": "Biggest project",
+      "label": "BIGGEST PROJECTS",
       "title": "Kaizen",
       "sub": "QA Tester",
       "text": "Looked for, identified, verified bugs and assisted Developers to ensure a smooth high-quality player experiences.",
@@ -138,6 +138,19 @@
       "statLabel": "members",
       "link": "",
       "id": "b5fdm3",
+      "hidden": false,
+      "nav": "",
+      "type": "feature"
+    },
+    {
+      "label": "BIGGEST PROJECTS",
+      "title": "A Bizarre Run",
+      "sub": "QA Tester",
+      "text": "Looked for, identified, verified bugs and assisted Developers to ensure a smooth high-quality player experiences.",
+      "stat": "148K+",
+      "statLabel": "members",
+      "link": "",
+      "id": "bq0zbq",
       "hidden": false,
       "nav": "",
       "type": "feature"
