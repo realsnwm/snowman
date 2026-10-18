@@ -1,33 +1,31 @@
 {
-  "accent": "#c4a6ff",
+  "accent": "#2b8c5a",
   "theme": "dark",
   "design": {
     "font": "system",
-    "cols": 2,
-    "radius": 22,
+    "radius": 32,
     "card": "glass",
     "nav": "pill",
     "width": "normal",
-    "glow": 60,
+    "glow": 100,
     "anim": true,
     "spot": true,
-    "head": "tight"
+    "head": "tight",
+    "cols": 2
   },
   "site": {
-    "brand": "Snowman",
+    "brand": "snowman",
     "footer": "",
     "cta": {
-      "label": "Discord: @ctmo",
-      "url": "#"
+      "label": "@ctmo",
+      "url": "https://discord.com/users/1163055480046878720"
     }
   },
   "blocks": [
     {
-      "id": "hero",
-      "type": "hero",
-      "eyebrow": "QA testing · Moderation · Server management",
+      "eyebrow": "SERVER MANAGEMENT · QA TESTING · MODERATION",
       "title": "Hi, I'm *Snowman*.",
-      "text": "QA testing, moderation and community management.",
+      "text": "Professional Community Manager, Moderator & QA Tester.",
       "btn1": {
         "label": "See positions",
         "url": "#current"
@@ -40,154 +38,223 @@
       "chip": {
         "name": "Snowman",
         "handle": "@ctmo",
-        "status": "Offline",
+        "status": "",
         "image": ""
-      }
+      },
+      "id": "hero",
+      "hidden": false,
+      "nav": "",
+      "type": "hero"
     },
     {
+      "label": "COMMUNITIES OR PROJECTS I HAVE HELPED IN",
+      "items": "Anime Crossovers, Last Stop, The Sail, Kaizen, A Bizarre Run, Vetra, Beast Clicker, Adopt A Brainrot, Cut Trees For Brainrots, Anime Invasion,",
       "id": "ticker",
-      "type": "marquee",
-      "label": "Communities I have helped run",
-      "items": "Anime Crossovers, Last Stop, The Sail, Kaizen, A Bizarre Run, Vetra (Discord Bot), Beast Clicker, Adopt A Brainrot, Cut Trees For Brainrots, Anime Invasion, A few Discord servers (+6,000 members)"
+      "hidden": false,
+      "nav": "",
+      "type": "marquee"
     },
     {
+      "eyebrow": "GET TO KNOW ME BETTER",
+      "title": "About me",
+      "text": "Hey, welcome to my portfolio! Let me introduce myself. My name's Snowman, I'm a guy, and I've always been curious about Roblox Development since a young age, which led to me being curious about everything around Roblox Games (Management, Development, Moderation, Testing) and more! I've now shifted to Server Managing, Moderation and also QA Testing at some places, but I'm always happy to learn about new things. If you'd ever want to contact me, you can do so by sending me a DM via Discord, because that's where I'm the most active.\n\n- For Hire!\n",
+      "layout": "split",
       "id": "about",
-      "type": "text",
+      "hidden": false,
       "nav": "About",
-      "eyebrow": "About",
-      "title": "About *me",
-      "text": "Hey, welcome to my portfolio! Let me introduce myself. My name's Snowman, I'm a guy, and I've always been curious about Roblox Development since a young age, which led to me being curious about everything around Roblox Games (Management, Development, Moderation, Testing) and more! I've now shifted to Server Managing, Moderation and also QA Testing at some places, but I'm always happy to learn about new things. If you'd ever want to contact me, you can do so by sending me a DM via Discord, because that's where I'm the most active.\n\nFor Hire! @ctmo\n\n- Contributed to over 50M visits! (through Testing)\n- Experienced Moderator & Manager",
-      "layout": "split"
+      "type": "text"
     },
     {
-      "id": "stats",
-      "type": "stats",
       "items": [
         {
-          "value": "50M+",
-          "label": "Roblox visits contributed through testing"
+          "value": "150M+",
+          "label": "Visits Contributed"
+        },
+        {
+          "value": "15,000",
+          "label": "Members Moderated"
         },
         {
           "value": "6,000+",
-          "label": "members in servers I managed"
-        },
-        {
-          "value": "12",
-          "label": "positions held across games and servers"
+          "label": "Members Moderated"
         }
-      ]
+      ],
+      "id": "bhx5bg",
+      "hidden": false,
+      "nav": "Stats",
+      "type": "stats"
     },
     {
-      "id": "current",
-      "type": "cards",
-      "nav": "Current",
-      "eyebrow": "Experience",
-      "title": "Current *positions*.",
-      "layout": "carousel",
-      "cols": "3",
+      "eyebrow": "WHAT I'M WORKING ON",
+      "title": "*Current* positions",
+      "text": "",
+      "layout": "grid",
+      "cols": "2",
       "items": [
         {
           "eyebrow": "Head Administrator",
           "title": "Anime Crossovers",
-          "text": "",
-          "badge": "Active"
+          "text": "-1,000 Members",
+          "badge": "Active",
+          "stat": "",
+          "statLabel": "",
+          "link": "",
+          "image": ""
         },
         {
           "eyebrow": "Helper & Tester",
           "title": "Last Stop",
-          "text": "",
-          "badge": "Active"
+          "text": "14,000+ Members",
+          "badge": "Active",
+          "stat": "",
+          "statLabel": "",
+          "link": "",
+          "image": ""
         },
         {
           "eyebrow": "Tester",
           "title": "The Sail",
-          "text": "",
-          "badge": "Active"
+          "text": "-1,000 Members",
+          "badge": "Active",
+          "stat": "",
+          "statLabel": "",
+          "link": "",
+          "image": ""
         },
         {
           "eyebrow": "Tester",
           "title": "Kaizen",
-          "text": "",
-          "badge": "Active"
+          "text": "160,000+ Members",
+          "badge": "Active",
+          "stat": "",
+          "statLabel": "",
+          "link": "",
+          "image": ""
         },
         {
           "eyebrow": "Tester",
           "title": "A Bizarre Run",
-          "text": "",
-          "badge": "Active"
+          "text": "148,000+ Members",
+          "badge": "Active",
+          "stat": "",
+          "statLabel": "",
+          "link": "",
+          "image": ""
         },
         {
           "eyebrow": "Product Team (QA Tester)",
           "title": "Vetra (Discord Bot)",
-          "text": "",
-          "badge": "Active"
+          "text": "-1,000 Members",
+          "badge": "Active",
+          "stat": "",
+          "statLabel": "",
+          "link": "",
+          "image": ""
         }
-      ]
+      ],
+      "id": "current",
+      "hidden": false,
+      "nav": "Current positions",
+      "type": "cards"
     },
     {
-      "id": "former",
-      "type": "list",
-      "nav": "Former",
-      "eyebrow": "Previous",
-      "title": "Former positions",
+      "eyebrow": "WHAT I WORKED ON",
+      "title": "*Former* positions",
+      "text": "",
+      "layout": "grid",
+      "cols": "2",
       "items": [
         {
+          "eyebrow": "Tester",
           "title": "Beast Clicker",
-          "sub": "Tester",
           "text": "",
-          "badge": "Retired"
+          "badge": "Retired",
+          "stat": "",
+          "statLabel": "",
+          "link": "",
+          "image": ""
         },
         {
+          "eyebrow": "Tester",
           "title": "Adopt A Brainrot",
-          "sub": "Tester",
           "text": "",
-          "badge": "Retired"
+          "badge": "Retired",
+          "stat": "",
+          "statLabel": "",
+          "link": "",
+          "image": ""
         },
         {
+          "eyebrow": "Tester",
           "title": "Cut Trees For Brainrots",
-          "sub": "Tester",
           "text": "",
-          "badge": "Retired"
+          "badge": "Retired",
+          "stat": "",
+          "statLabel": "",
+          "link": "",
+          "image": ""
         },
         {
+          "eyebrow": "Tester",
           "title": "Anime Invasion",
-          "sub": "Tester",
           "text": "",
-          "badge": "Retired"
+          "badge": "Retired",
+          "stat": "",
+          "statLabel": "",
+          "link": "",
+          "image": ""
         },
         {
+          "eyebrow": "Trial Moderator",
           "title": "Last Stop",
-          "sub": "Trial Moderator",
           "text": "",
-          "badge": "Retired"
+          "badge": "Retired",
+          "stat": "",
+          "statLabel": "",
+          "link": "",
+          "image": ""
         },
         {
-          "title": "A few Discord servers (+6,000 members)",
-          "sub": "Server Manager",
-          "text": "",
-          "badge": "Retired"
+          "eyebrow": "Server Manager",
+          "title": "Other Servers",
+          "text": "\n",
+          "badge": "Retired",
+          "stat": "",
+          "statLabel": "",
+          "link": "",
+          "image": ""
         }
-      ]
+      ],
+      "id": "former",
+      "hidden": false,
+      "nav": "Former positions",
+      "type": "cards"
     },
     {
-      "id": "contact",
-      "type": "contact",
-      "nav": "Contact",
-      "hidden": true,
       "eyebrow": "Contact",
-      "title": "Want to work *together*?",
-      "text": "Send me a request, or message me on Discord.",
-      "email": "",
-      "options": "Server management, Moderation, QA testing, Something else",
+      "title": "Want us to work *together*?",
+      "text": "Send me a project request or message me directly (preferred).",
+      "email": "realsnowman00@gmail.com",
+      "options": "Server Setup, Moderation, Management, Other inquiries\n",
       "form": "on",
       "rows": [
         {
-          "label": "Discord",
+          "label": "Reach me through Discord",
           "value": "@ctmo",
-          "url": "#"
+          "url": "https://discord.com/users/1163055480046878720\n"
         }
-      ]
+      ],
+      "id": "contact",
+      "hidden": false,
+      "nav": "Contact",
+      "type": "contact"
+    },
+    {
+      "text": "© Snowman, All rights reserved.",
+      "id": "bx9zuv",
+      "hidden": false,
+      "nav": "",
+      "type": "notice"
     }
-  ],
-  "assets": { "images": [], "fonts": [] }
+  ]
 }
