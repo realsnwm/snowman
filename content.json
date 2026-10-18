@@ -2,7 +2,7 @@
   "accent": "#0ca170",
   "theme": "dark",
   "design": {
-    "font": "Space Grotesk",
+    "font": "Outfit",
     "radius": 32,
     "card": "glass",
     "nav": "pill",
@@ -27,6 +27,18 @@
     "contact.options": {
       "align": "",
       "tt": "capitalize"
+    },
+    "hero.text": {
+      "font": ""
+    },
+    "bhx5bg.items.0.value": {
+      "font": "Fira Code"
+    },
+    "bhx5bg.items.1.value": {
+      "font": "Fira Code"
+    },
+    "bhx5bg.items.2.value": {
+      "font": "Fira Code"
     }
   },
   "integ": {
@@ -67,7 +79,9 @@
       "nav": "",
       "type": "hero",
       "style": {
-        "color": ""
+        "color": "",
+        "an": "up",
+        "ad": 0.5
       }
     },
     {
