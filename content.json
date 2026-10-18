@@ -14,7 +14,9 @@
     "spot": true,
     "head": "tight"
   },
-  "eyebrows": {},
+  "eyebrows": {
+    "expertise": "WHAT I CAN DO"
+  },
   "stats": [
     {
       "value": "150M+\n",
@@ -29,7 +31,32 @@
       "label": "Members Managed"
     }
   ],
-  "expertise": [],
+  "expertise": [
+    {
+      "title": "Server Management",
+      "tags": "tag · tag · tag"
+    },
+    {
+      "title": "Moderation",
+      "tags": "tag · tag · tag"
+    },
+    {
+      "title": "Support",
+      "tags": "tag · tag · tag"
+    },
+    {
+      "title": "Staff Organization",
+      "tags": "tag · tag · tag"
+    },
+    {
+      "title": "QA Testing",
+      "tags": "tag · tag · tag"
+    },
+    {
+      "title": "Server Designing",
+      "tags": "tag · tag · tag"
+    }
+  ],
   "labels": {
     "about": "About me"
   },
