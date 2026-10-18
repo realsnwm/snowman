@@ -65,10 +65,6 @@
       "type": "text"
     },
     {
-      "id": "bhx5bg",
-      "type": "stats",
-      "hidden": false,
-      "nav": "",
       "items": [
         {
           "value": "150M+",
@@ -82,7 +78,11 @@
           "value": "6,000+",
           "label": "Members Moderated"
         }
-      ]
+      ],
+      "id": "bhx5bg",
+      "hidden": false,
+      "nav": "Stats",
+      "type": "stats"
     },
     {
       "eyebrow": "WHAT I'M WORKING ON",
@@ -250,40 +250,11 @@
       "type": "contact"
     },
     {
+      "text": "© Snowman, All rights reserved.",
       "id": "bx9zuv",
-      "type": "notice",
       "hidden": false,
       "nav": "",
-      "text": "© Snowman"
-    },
-    {
-      "id": "bzaquk",
-      "type": "gallery",
-      "hidden": false,
-      "nav": "",
-      "eyebrow": "Design",
-      "title": "Custom *work*.",
-      "text": "Describe the work shown.",
-      "note": "Original work. All rights reserved.",
-      "cols": "4",
-      "items": [
-        {
-          "image": "",
-          "caption": ""
-        },
-        {
-          "image": "",
-          "caption": ""
-        },
-        {
-          "image": "",
-          "caption": ""
-        },
-        {
-          "image": "",
-          "caption": ""
-        }
-      ]
+      "type": "notice"
     }
   ]
 }
