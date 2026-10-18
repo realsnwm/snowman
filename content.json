@@ -17,7 +17,7 @@
     "brand": "snowman",
     "footer": "",
     "cta": {
-      "label": "Discord: @ctmo",
+      "label": "@ctmo",
       "url": "https://discord.com/users/1163055480046878720"
     }
   },
@@ -25,7 +25,7 @@
     {
       "eyebrow": "QA testing · Moderation · Server management",
       "title": "Hi, I'm Snowman.",
-      "text": "QA testing, moderation and community management.",
+      "text": "QA Testing, Moderation and Community Management.",
       "btn1": {
         "label": "See positions",
         "url": "#current"
@@ -57,7 +57,7 @@
     {
       "eyebrow": "GET TO KNOW ME BETTER",
       "title": "About me",
-      "text": "Hey, welcome to my portfolio! Let me introduce myself. My name's Snowman, I'm a guy, and I've always been curious about Roblox Development since a young age, which led to me being curious about everything around Roblox Games (Management, Development, Moderation, Testing) and more! I've now shifted to Server Managing, Moderation and also QA Testing at some places, but I'm always happy to learn about new things. If you'd ever want to contact me, you can do so by sending me a DM via Discord, because that's where I'm the most active.\n\nFor Hire! @ctmo\n\n- Contributed to over 150M visits!\n- Experienced Moderator & Manager",
+      "text": "Hey, welcome to my portfolio! Let me introduce myself. My name's Snowman, I'm a guy, and I've always been curious about Roblox Development since a young age, which led to me being curious about everything around Roblox Games (Management, Development, Moderation, Testing) and more! I've now shifted to Server Managing, Moderation and also QA Testing at some places, but I'm always happy to learn about new things. If you'd ever want to contact me, you can do so by sending me a DM via Discord, because that's where I'm the most active.\n\n- For Hire!\n",
       "layout": "split",
       "id": "about",
       "hidden": false,
@@ -212,8 +212,8 @@
     },
     {
       "eyebrow": "Contact",
-      "title": "Want to work *together*?",
-      "text": "Send me a project request or message me.",
+      "title": "Want us to work *together*?",
+      "text": "Send me a project request or message me directly (preferred).",
       "email": "realsnowman00@gmail.com",
       "options": "Server Setup, Moderation, Management, Other inquiries\n",
       "form": "on",
