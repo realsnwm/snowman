@@ -42,8 +42,8 @@
     }
   },
   "seo": {
-    "title": "Snowman’s Portfolio",
-    "desc": "Professional portfolio listing my experience throughout numerous projects.",
+    "title": "",
+    "desc": "",
     "image": "",
     "favicon": "",
     "color": ""
@@ -76,7 +76,7 @@
       },
       "chipOn": "on",
       "chip": {
-        "name": "Snowman",
+        "name": "  Snowman",
         "handle": "@ctmo",
         "status": "",
         "image": ""
@@ -116,12 +116,12 @@
           "label": "Visits Contributed"
         },
         {
-          "value": "15,000+",
+          "value": "15,000",
           "label": "Members Moderated"
         },
         {
           "value": "6,000+",
-          "label": "Members Managed"
+          "label": "Members Moderated"
         }
       ],
       "id": "bhx5bg",
@@ -130,7 +130,7 @@
       "type": "stats"
     },
     {
-      "label": "BIGGEST PROJECTS",
+      "label": "Biggest project",
       "title": "Kaizen",
       "sub": "QA Tester",
       "text": "Looked for, identified, verified bugs and assisted Developers to ensure a smooth high-quality player experiences.",
@@ -138,19 +138,6 @@
       "statLabel": "members",
       "link": "",
       "id": "b5fdm3",
-      "hidden": false,
-      "nav": "",
-      "type": "feature"
-    },
-    {
-      "label": "BIGGEST PROJECTS",
-      "title": "A Bizarre Run",
-      "sub": "QA Tester",
-      "text": "Looked for, identified, verified bugs and assisted Developers to ensure a smooth high-quality player experiences.",
-      "stat": "148K+",
-      "statLabel": "members",
-      "link": "",
-      "id": "bq0zbq",
       "hidden": false,
       "nav": "",
       "type": "feature"
@@ -322,7 +309,7 @@
     },
     {
       "text": "© Snowman, All rights reserved.",
-      "id": "Notice",
+      "id": "bx9zuv",
       "hidden": false,
       "nav": "",
       "type": "notice"
