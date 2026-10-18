@@ -1,0 +1,192 @@
+{
+  "accent": "#c4a6ff",
+  "theme": "dark",
+  "design": {
+    "font": "system",
+    "cols": 2,
+    "radius": 22,
+    "card": "glass",
+    "nav": "pill",
+    "width": "normal",
+    "glow": 60,
+    "anim": true,
+    "spot": true,
+    "head": "tight"
+  },
+  "site": {
+    "brand": "Snowman",
+    "footer": "",
+    "cta": {
+      "label": "Discord: @ctmo",
+      "url": "#"
+    }
+  },
+  "blocks": [
+    {
+      "id": "hero",
+      "type": "hero",
+      "eyebrow": "QA testing · Moderation · Server management",
+      "title": "Hi, I'm *Snowman*.",
+      "text": "QA testing, moderation and community management.",
+      "btn1": {
+        "label": "See positions",
+        "url": "#current"
+      },
+      "btn2": {
+        "label": "",
+        "url": ""
+      },
+      "chipOn": "on",
+      "chip": {
+        "name": "Snowman",
+        "handle": "@ctmo",
+        "status": "Offline",
+        "image": ""
+      }
+    },
+    {
+      "id": "ticker",
+      "type": "marquee",
+      "label": "Communities I have helped run",
+      "items": "Anime Crossovers, Last Stop, The Sail, Kaizen, A Bizarre Run, Vetra (Discord Bot), Beast Clicker, Adopt A Brainrot, Cut Trees For Brainrots, Anime Invasion, A few Discord servers (+6,000 members)"
+    },
+    {
+      "id": "about",
+      "type": "text",
+      "nav": "About",
+      "eyebrow": "About",
+      "title": "About *me*",
+      "text": "Hey, welcome to my portfolio! Let me introduce myself. My name's Snowman, I'm a guy, and I've always been curious about Roblox Development since a young age, which led to me being curious about everything around Roblox Games (Management, Development, Moderation, Testing) and more! I've now shifted to Server Managing, Moderation and also QA Testing at some places, but I'm always happy to learn about new things. If you'd ever want to contact me, you can do so by sending me a DM via Discord, because that's where I'm the most active.\n\nFor Hire! @ctmo\n\n- Contributed to over 50M visits! (through Testing)\n- Experienced Moderator & Manager",
+      "layout": "split"
+    },
+    {
+      "id": "stats",
+      "type": "stats",
+      "items": [
+        {
+          "value": "50M+",
+          "label": "Roblox visits contributed through testing"
+        },
+        {
+          "value": "6,000+",
+          "label": "members in servers I managed"
+        },
+        {
+          "value": "12",
+          "label": "positions held across games and servers"
+        }
+      ]
+    },
+    {
+      "id": "current",
+      "type": "cards",
+      "nav": "Current",
+      "eyebrow": "Experience",
+      "title": "Current *positions*.",
+      "layout": "carousel",
+      "cols": "3",
+      "items": [
+        {
+          "eyebrow": "Head Administrator",
+          "title": "Anime Crossovers",
+          "text": "",
+          "badge": "Active"
+        },
+        {
+          "eyebrow": "Helper & Tester",
+          "title": "Last Stop",
+          "text": "",
+          "badge": "Active"
+        },
+        {
+          "eyebrow": "Tester",
+          "title": "The Sail",
+          "text": "",
+          "badge": "Active"
+        },
+        {
+          "eyebrow": "Tester",
+          "title": "Kaizen",
+          "text": "",
+          "badge": "Active"
+        },
+        {
+          "eyebrow": "Tester",
+          "title": "A Bizarre Run",
+          "text": "",
+          "badge": "Active"
+        },
+        {
+          "eyebrow": "Product Team (QA Tester)",
+          "title": "Vetra (Discord Bot)",
+          "text": "",
+          "badge": "Active"
+        }
+      ]
+    },
+    {
+      "id": "former",
+      "type": "list",
+      "nav": "Former",
+      "eyebrow": "Previous",
+      "title": "Former positions",
+      "items": [
+        {
+          "title": "Beast Clicker",
+          "sub": "Tester",
+          "text": "",
+          "badge": "Retired"
+        },
+        {
+          "title": "Adopt A Brainrot",
+          "sub": "Tester",
+          "text": "",
+          "badge": "Retired"
+        },
+        {
+          "title": "Cut Trees For Brainrots",
+          "sub": "Tester",
+          "text": "",
+          "badge": "Retired"
+        },
+        {
+          "title": "Anime Invasion",
+          "sub": "Tester",
+          "text": "",
+          "badge": "Retired"
+        },
+        {
+          "title": "Last Stop",
+          "sub": "Trial Moderator",
+          "text": "",
+          "badge": "Retired"
+        },
+        {
+          "title": "A few Discord servers (+6,000 members)",
+          "sub": "Server Manager",
+          "text": "",
+          "badge": "Retired"
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "type": "contact",
+      "nav": "Contact",
+      "hidden": true,
+      "eyebrow": "Contact",
+      "title": "Want to work *together*?",
+      "text": "Send me a request, or message me on Discord.",
+      "email": "",
+      "options": "Server management, Moderation, QA testing, Something else",
+      "form": "on",
+      "rows": [
+        {
+          "label": "Discord",
+          "value": "@ctmo",
+          "url": "#"
+        }
+      ]
+    }
+  ]
+}
