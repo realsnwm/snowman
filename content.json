@@ -35,7 +35,7 @@
     "plausible": ""
   },
   "site": {
-    "brand": "Snowman's Portfolio",
+    "brand": "snowman",
     "footer": "",
     "cta": {
       "label": "@ctmo",
@@ -48,7 +48,7 @@
       "title": "Hi, I'm *Snowman*.",
       "text": "A Professional Community Manager, Moderator & QA Tester.",
       "btn1": {
-        "label": "See positions",
+        "label": "View Experience",
         "url": "#current"
       },
       "btn2": {
@@ -65,7 +65,10 @@
       "id": "hero",
       "hidden": false,
       "nav": "",
-      "type": "hero"
+      "type": "hero",
+      "style": {
+        "color": ""
+      }
     },
     {
       "label": "COMMUNITIES OR PROJECTS I HAVE HELPED IN",
