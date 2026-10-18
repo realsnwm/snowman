@@ -1,8 +1,8 @@
 {
-  "accent": "#2b8c5a",
+  "accent": "#0ca170",
   "theme": "dark",
   "design": {
-    "font": "system",
+    "font": "Space Grotesk",
     "radius": 32,
     "card": "glass",
     "nav": "pill",
@@ -11,7 +11,7 @@
     "anim": true,
     "spot": true,
     "head": "tight",
-    "hsize": 100,
+    "hsize": 115,
     "bsize": 100,
     "sg": 100,
     "spd": 1,
@@ -21,7 +21,7 @@
   "custom": {
     "css": "",
     "head": "<link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛄</text></svg>\">",
-    "hfont": ""
+    "hfont": "Lexend"
   },
   "fx": {
     "contact.options": {
