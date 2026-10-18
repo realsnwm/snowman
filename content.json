@@ -1,0 +1,177 @@
+{
+  "accent": "#c4a6ff",
+  "theme": "dark",
+  "hidden": [
+    "expertise",
+    "contact"
+  ],
+  "hero": {
+    "name": "Hi, I'm *Snowman*.",
+    "title": "QA testing · Moderation · Server management",
+    "intro": "QA testing, moderation and community management.",
+    "image": "",
+    "cta": "See positions",
+    "brand": "Snowman"
+  },
+  "about": "Hey, welcome to my portfolio! Let me introduce myself. My name's Snowman, I'm a guy, and I've always been curious about Roblox Development since a young age, which led to me being curious about everything around Roblox Games (Management, Development, Moderation, Testing) and more! I've now shifted to Server Managing, Moderation and also QA Testing at some places, but I'm always happy to learn about new things. If you'd ever want to contact me, you can do so by sending me a DM via Discord, because that's where I'm the most active.\n\nFor Hire! @ctmo\n\n- Contributed to over 50M visits! (through Testing)\n- Experienced Moderator & Manager",
+  "current": [
+    {
+      "title": "Anime Crossovers",
+      "role": "Head Administrator",
+      "badge": "Active",
+      "desc": "",
+      "link": ""
+    },
+    {
+      "title": "Last Stop",
+      "role": "Helper & Tester",
+      "badge": "Active",
+      "desc": "",
+      "link": ""
+    },
+    {
+      "title": "The Sail",
+      "role": "Tester",
+      "badge": "Active",
+      "desc": "",
+      "link": ""
+    },
+    {
+      "title": "Kaizen",
+      "role": "Tester",
+      "badge": "Active",
+      "desc": "",
+      "link": ""
+    },
+    {
+      "title": "A Bizarre Run",
+      "role": "Tester",
+      "badge": "Active",
+      "desc": "",
+      "link": ""
+    },
+    {
+      "title": "Vetra (Discord Bot)",
+      "role": "Product Team (QA Tester)",
+      "badge": "Active",
+      "desc": "",
+      "link": ""
+    }
+  ],
+  "former": [
+    {
+      "title": "Beast Clicker",
+      "role": "Tester",
+      "badge": "Retired",
+      "desc": "",
+      "link": ""
+    },
+    {
+      "title": "Adopt A Brainrot",
+      "role": "Tester",
+      "badge": "Retired",
+      "desc": "",
+      "link": ""
+    },
+    {
+      "title": "Cut Trees For Brainrots",
+      "role": "Tester",
+      "badge": "Retired",
+      "desc": "",
+      "link": ""
+    },
+    {
+      "title": "Anime Invasion",
+      "role": "Tester",
+      "badge": "Retired",
+      "desc": "",
+      "link": ""
+    },
+    {
+      "title": "Last Stop",
+      "role": "Trial Moderator",
+      "badge": "Retired",
+      "desc": "",
+      "link": ""
+    },
+    {
+      "title": "A few Discord servers (+6,000 members)",
+      "role": "Server Manager",
+      "badge": "Retired",
+      "desc": "",
+      "link": ""
+    }
+  ],
+  "contact": {
+    "email": "",
+    "links": [
+      {
+        "label": "Discord: @ctmo",
+        "url": "#"
+      }
+    ]
+  },
+  "order": [
+    "hero",
+    "marquee",
+    "about",
+    "stats",
+    "expertise",
+    "current",
+    "former",
+    "contact"
+  ],
+  "design": {
+    "font": "system",
+    "cols": 2,
+    "radius": 22,
+    "card": "glass",
+    "nav": "pill",
+    "width": "normal",
+    "glow": 60,
+    "anim": true,
+    "spot": true,
+    "head": "tight"
+  },
+  "labels": {
+    "about": "About me"
+  },
+  "eyebrows": {
+    "about": "About",
+    "expertise": "What I work on",
+    "current": "Current",
+    "former": "Previous"
+  },
+  "stats": [
+    {
+      "value": "50M+",
+      "label": "Roblox visits contributed through testing"
+    },
+    {
+      "value": "6,000+",
+      "label": "members in servers I managed"
+    },
+    {
+      "value": "12",
+      "label": "positions held across games and servers"
+    }
+  ],
+  "expertise": [
+    {
+      "title": "QA testing",
+      "tags": "regression · bug reports · launch checks"
+    },
+    {
+      "title": "Moderation",
+      "tags": "reports · enforcement · appeals"
+    },
+    {
+      "title": "Server management",
+      "tags": "staff · roles · channels"
+    },
+    {
+      "title": "Game management",
+      "tags": "teams · testing · support"
+    }
+  ]
+}
