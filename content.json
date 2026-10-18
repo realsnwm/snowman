@@ -68,7 +68,7 @@
       "eyebrow": "WHAT I'M WORKING ON",
       "title": "Current positions",
       "text": "",
-      "layout": "carousel",
+      "layout": "grid",
       "cols": "2",
       "items": [
         {
@@ -141,7 +141,7 @@
       "eyebrow": "WHAT I WORKED ON",
       "title": "Former positions",
       "text": "",
-      "layout": "carousel",
+      "layout": "grid",
       "cols": "2",
       "items": [
         {
@@ -219,8 +219,8 @@
       "form": "on",
       "rows": [
         {
-          "label": "\n",
-          "value": "Discord: @ctmo",
+          "label": "Reach me through Discord",
+          "value": "@ctmo",
           "url": "#"
         }
       ],
