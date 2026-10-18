@@ -1,105 +1,86 @@
 {
-  "accent": "#c4a6ff",
-  "theme": "dark",
-  "hidden": [
-    "expertise",
+  "accent": "#0e6c4d",
+  "theme": "auto",
+  "hidden": [],
+  "design": {
+    "font": "rounded",
+    "cols": 3,
+    "radius": 23
+  },
+  "labels": {
+    "about": "About Me",
+    "current": "Current Positions",
+    "former": "Former Positions"
+  },
+  "order": [
+    "hero",
+    "about",
+    "current",
+    "former",
     "contact"
   ],
   "hero": {
-    "name": "Hi, I'm *Snowman*.",
-    "title": "QA testing · Moderation · Server management",
-    "intro": "QA testing, moderation and community management.",
+    "name": "Snowman",
+    "title": "Roblox Tester, Moderator and Server Manager",
+    "intro": "QA Testing, Moderation and Mommunity management.",
     "image": "",
-    "cta": "See positions",
-    "brand": "Snowman"
+    "cta": "See positions"
   },
   "about": "Hey, welcome to my portfolio! Let me introduce myself. My name's Snowman, I'm a guy, and I've always been curious about Roblox Development since a young age, which led to me being curious about everything around Roblox Games (Management, Development, Moderation, Testing) and more! I've now shifted to Server Managing, Moderation and also QA Testing at some places, but I'm always happy to learn about new things. If you'd ever want to contact me, you can do so by sending me a DM via Discord, because that's where I'm the most active.\n\nFor Hire! @ctmo\n\n- Contributed to over 50M visits! (through Testing)\n- Experienced Moderator & Manager",
   "current": [
     {
       "title": "Anime Crossovers",
-      "role": "Head Administrator",
-      "badge": "Active",
-      "desc": "",
-      "link": ""
+      "role": "Head Administrator"
     },
     {
       "title": "Last Stop",
-      "role": "Helper & Tester",
-      "badge": "Active",
-      "desc": "",
-      "link": ""
+      "role": "Helper & Tester"
     },
     {
       "title": "The Sail",
-      "role": "Tester",
-      "badge": "Active",
-      "desc": "",
-      "link": ""
+      "role": "Tester"
     },
     {
       "title": "Kaizen",
-      "role": "Tester",
-      "badge": "Active",
-      "desc": "",
-      "link": ""
+      "role": "Tester"
     },
     {
       "title": "A Bizarre Run",
-      "role": "Tester",
-      "badge": "Active",
-      "desc": "",
-      "link": ""
+      "role": "Tester"
     },
     {
       "title": "Vetra (Discord Bot)",
-      "role": "Product Team (QA Tester)",
-      "badge": "Active",
-      "desc": "",
-      "link": ""
+      "role": "Product Team (QA Tester)"
+    },
+    {
+      "title": "Hood Wars",
+      "role": "Tester"
     }
   ],
   "former": [
     {
       "title": "Beast Clicker",
-      "role": "Tester",
-      "badge": "Retired",
-      "desc": "",
-      "link": ""
+      "role": "Tester"
     },
     {
       "title": "Adopt A Brainrot",
-      "role": "Tester",
-      "badge": "Retired",
-      "desc": "",
-      "link": ""
+      "role": "Tester"
     },
     {
       "title": "Cut Trees For Brainrots",
-      "role": "Tester",
-      "badge": "Retired",
-      "desc": "",
-      "link": ""
+      "role": "Tester"
     },
     {
       "title": "Anime Invasion",
-      "role": "Tester",
-      "badge": "Retired",
-      "desc": "",
-      "link": ""
+      "role": "Tester"
     },
     {
       "title": "Last Stop",
-      "role": "Trial Moderator",
-      "badge": "Retired",
-      "desc": "",
-      "link": ""
+      "role": "Trial Moderator"
     },
     {
       "title": "A few Discord servers (+6,000 members)",
-      "role": "Server Manager",
-      "badge": "Retired",
-      "desc": "",
-      "link": ""
+      "role": "Server Manager"
     }
   ],
   "contact": {
@@ -107,71 +88,8 @@
     "links": [
       {
         "label": "Discord: @ctmo",
-        "url": "#"
+        "url": ""
       }
     ]
-  },
-  "order": [
-    "hero",
-    "marquee",
-    "about",
-    "stats",
-    "expertise",
-    "current",
-    "former",
-    "contact"
-  ],
-  "design": {
-    "font": "system",
-    "cols": 2,
-    "radius": 22,
-    "card": "glass",
-    "nav": "pill",
-    "width": "normal",
-    "glow": 60,
-    "anim": true,
-    "spot": true,
-    "head": "tight"
-  },
-  "labels": {
-    "about": "About me"
-  },
-  "eyebrows": {
-    "about": "About",
-    "expertise": "What I work on",
-    "current": "Current",
-    "former": "Previous"
-  },
-  "stats": [
-    {
-      "value": "50M+",
-      "label": "Roblox visits contributed through testing"
-    },
-    {
-      "value": "6,000+",
-      "label": "members in servers I managed"
-    },
-    {
-      "value": "12",
-      "label": "positions held across games and servers"
-    }
-  ],
-  "expertise": [
-    {
-      "title": "QA testing",
-      "tags": "regression · bug reports · launch checks"
-    },
-    {
-      "title": "Moderation",
-      "tags": "reports · enforcement · appeals"
-    },
-    {
-      "title": "Server management",
-      "tags": "staff · roles · channels"
-    },
-    {
-      "title": "Game management",
-      "tags": "teams · testing · support"
-    }
-  ]
+  }
 }
