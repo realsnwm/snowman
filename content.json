@@ -4,7 +4,7 @@
   "design": {
     "font": "Outfit",
     "hfont": "Poppins",
-    "efont": "Sora",
+    "efont": "serif",
     "fontC": "",
     "hfontC": "",
     "efontC": "",
@@ -167,7 +167,7 @@
           "label": "Visits Contributed"
         },
         {
-          "value": "**15,000**",
+          "value": "**15,000+**",
           "label": "Members Moderated"
         },
         {
