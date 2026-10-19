@@ -3,14 +3,38 @@
   "theme": "dark",
   "design": {
     "font": "Outfit",
+    "hfont": "system",
+    "efont": "serif",
+    "fontC": "",
+    "hfontC": "",
+    "efontC": "",
+    "size": 16,
+    "hscale": 100,
+    "hweight": 700,
+    "head": "tight",
     "radius": 32,
     "card": "glass",
     "nav": "pill",
     "width": "normal",
+    "space": 100,
+    "gap": 14,
     "glow": 100,
+    "bg": "",
+    "fg": "",
+    "bgImg": "",
+    "dim": 0,
     "anim": true,
+    "reveal": "rise",
+    "dur": 900,
+    "stagger": 80,
+    "hover": "lift",
     "spot": true,
-    "head": "tight",
+    "cursor": true,
+    "smooth": true,
+    "progress": false,
+    "sticky": true,
+    "themeBtn": true,
+    "css": "",
     "hsize": 115,
     "bsize": 100,
     "sg": 100,
@@ -18,51 +42,27 @@
     "mqs": 60,
     "cols": 2
   },
-  "custom": {
-    "css": "",
-    "head": "<link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛄</text></svg>\">",
-    "hfont": "Lexend"
-  },
-  "fx": {
-    "contact.options": {
-      "align": "",
-      "tt": "capitalize"
-    },
-    "hero.text": {
-      "font": ""
-    },
-    "bhx5bg.items.0.value": {
-      "font": "Fira Code"
-    },
-    "bhx5bg.items.1.value": {
-      "font": "Fira Code"
-    },
-    "bhx5bg.items.2.value": {
-      "font": "Fira Code"
-    }
-  },
-  "seo": {
-    "title": "Snowman's Portfolio",
-    "desc": "Professional portfolio listing my experience throughout numerous projects. Made my myself.",
-    "image": "",
-    "favicon": "",
-    "color": "#00ffaa"
-  },
-  "integ": {
-    "webhook": "",
-    "formUrl": "",
-    "plausible": ""
-  },
   "site": {
     "brand": "snowman",
     "footer": "",
+    "title": "",
+    "desc": "",
+    "favicon": "",
     "cta": {
       "label": "@ctmo",
       "url": "https://discord.com/users/1163055480046878720"
+    },
+    "ui": {
+      "all": "view all",
+      "less": "show less",
+      "open": "Open",
+      "phName": "How should I address you?",
+      "phMsg": "What the project is, and your timeline."
     }
   },
   "blocks": [
     {
+      "chipOn": "on",
       "eyebrow": "SERVER MANAGEMENT · QA TESTING · MODERATION",
       "title": "Hi, I'm *Snowman*.",
       "text": "A Professional Community Manager, Moderator & QA Tester.",
@@ -74,13 +74,24 @@
         "label": "View Experience",
         "url": "#former"
       },
-      "chipOn": "on",
       "chip": {
         "name": "  Snowman",
         "handle": "@ctmo",
         "status": "",
         "image": ""
       },
+      "align": "left",
+      "size": "m",
+      "pad": "m",
+      "width": "normal",
+      "bgs": "none",
+      "bgc": "",
+      "div": "off",
+      "anim": "default",
+      "delay": 0,
+      "tc": "",
+      "sf": "",
+      "hide": "never",
       "id": "hero",
       "hidden": false,
       "nav": "",
@@ -92,24 +103,64 @@
       }
     },
     {
+      "speed": "normal",
+      "dir": "left",
       "label": "COMMUNITIES OR PROJECTS I HAVE HELPED IN",
-      "items": "Anime Crossovers, Last Stop, The Sail, Kaizen, A Bizarre Run, Vetra, Beast Clicker, Adopt A Brainrot, Cut Trees For Brainrots, Anime Invasion,",
+      "items": [
+        "Anime Crossovers",
+        "Last Stop",
+        "The Sail",
+        "Kaizen",
+        "A Bizarre Run",
+        "Vetra",
+        "Beast Clicker",
+        "Adopt A Brainrot",
+        "Cut Trees For Brainrots",
+        "Anime Invasion"
+      ],
+      "align": "left",
+      "size": "m",
+      "pad": "m",
+      "width": "normal",
+      "bgs": "none",
+      "bgc": "",
+      "div": "off",
+      "anim": "default",
+      "delay": 0,
+      "tc": "",
+      "sf": "",
+      "hide": "never",
       "id": "ticker",
       "hidden": false,
       "nav": "",
       "type": "marquee"
     },
     {
+      "layout": "split",
+      "ratio": "1:1",
+      "tcols": "1",
       "eyebrow": "GET TO KNOW ME BETTER",
       "title": "About *me*",
       "text": "Hey, welcome to my portfolio! Let me introduce myself. My name's Snowman, I'm a guy, and I've always been curious about Roblox Development since a young age, which led to me being curious about everything around Roblox Games (Management, Development, Moderation, Testing) and more! I've now shifted to Server Managing, Moderation and also QA Testing at some places, but I'm always happy to learn about new things. If you'd ever want to contact me, you can do so by sending me a DM via Discord, because that's where I'm the most active.\n\n- For Hire!\n",
-      "layout": "split",
+      "align": "left",
+      "size": "m",
+      "pad": "m",
+      "width": "normal",
+      "bgs": "none",
+      "bgc": "",
+      "div": "off",
+      "anim": "default",
+      "delay": 0,
+      "tc": "",
+      "sf": "",
+      "hide": "never",
       "id": "about",
       "hidden": false,
       "nav": "About Me",
       "type": "text"
     },
     {
+      "cols": "auto",
       "items": [
         {
           "value": "150M+",
@@ -124,6 +175,18 @@
           "label": "Members Managed"
         }
       ],
+      "align": "left",
+      "size": "m",
+      "pad": "m",
+      "width": "normal",
+      "bgs": "none",
+      "bgc": "",
+      "div": "off",
+      "anim": "default",
+      "delay": 0,
+      "tc": "",
+      "sf": "",
+      "hide": "never",
       "id": "bhx5bg",
       "hidden": false,
       "nav": "Stats",
@@ -137,17 +200,29 @@
       "stat": "160K+",
       "statLabel": "members",
       "link": "",
+      "align": "left",
+      "size": "m",
+      "pad": "m",
+      "width": "normal",
+      "bgs": "none",
+      "bgc": "",
+      "div": "off",
+      "anim": "default",
+      "delay": 0,
+      "tc": "",
+      "sf": "",
+      "hide": "never",
       "id": "b5fdm3",
       "hidden": false,
       "nav": "",
       "type": "feature"
     },
     {
+      "layout": "grid",
+      "cols": "2",
       "eyebrow": "WHAT I'M WORKING ON",
       "title": "*Current* positions",
       "text": "",
-      "layout": "grid",
-      "cols": "2",
       "items": [
         {
           "eyebrow": "Head Administrator",
@@ -210,17 +285,29 @@
           "image": ""
         }
       ],
+      "align": "left",
+      "size": "m",
+      "pad": "m",
+      "width": "normal",
+      "bgs": "none",
+      "bgc": "",
+      "div": "off",
+      "anim": "default",
+      "delay": 0,
+      "tc": "",
+      "sf": "",
+      "hide": "never",
       "id": "current",
       "hidden": false,
       "nav": "Current Positions",
       "type": "cards"
     },
     {
+      "layout": "numbered",
+      "cols": "1",
       "eyebrow": "WHAT I WORKED ON",
       "title": "*Former* positions",
       "text": "",
-      "layout": "numbered",
-      "cols": "1",
       "items": [
         {
           "eyebrow": "Tester",
@@ -283,18 +370,36 @@
           "image": ""
         }
       ],
+      "align": "left",
+      "size": "m",
+      "pad": "m",
+      "width": "normal",
+      "bgs": "none",
+      "bgc": "",
+      "div": "off",
+      "anim": "default",
+      "delay": 0,
+      "tc": "",
+      "sf": "",
+      "hide": "never",
       "id": "former",
       "hidden": false,
       "nav": "Former Positions",
       "type": "cards"
     },
     {
+      "form": "on",
+      "ratio": "1:1",
       "eyebrow": "Contact",
       "title": "Want us to work *together*?",
       "text": "Send me a project request or message me directly (preferred).",
       "email": "realsnowman00@gmail.com",
-      "options": "Server Setup, Moderation, Management, Other inquiries\n",
-      "form": "on",
+      "options": [
+        "Server Setup",
+        "Moderation",
+        "Management",
+        "Other inquiries"
+      ],
       "rows": [
         {
           "label": "Reach me through Discord",
@@ -302,6 +407,25 @@
           "url": "https://discord.com/users/1163055480046878720\n"
         }
       ],
+      "fl": {
+        "name": "Name or Discord username",
+        "need": "What do you need?",
+        "hint": "pick any that apply",
+        "msg": "Tell me what you need",
+        "send": "Send request"
+      },
+      "align": "left",
+      "size": "m",
+      "pad": "m",
+      "width": "normal",
+      "bgs": "none",
+      "bgc": "",
+      "div": "off",
+      "anim": "default",
+      "delay": 0,
+      "tc": "",
+      "sf": "",
+      "hide": "never",
       "id": "contact",
       "hidden": false,
       "nav": "Contact",
@@ -309,6 +433,18 @@
     },
     {
       "text": "© Snowman, All rights reserved.",
+      "align": "left",
+      "size": "m",
+      "pad": "m",
+      "width": "normal",
+      "bgs": "none",
+      "bgc": "",
+      "div": "off",
+      "anim": "default",
+      "delay": 0,
+      "tc": "",
+      "sf": "",
+      "hide": "never",
       "id": "bx9zuv",
       "hidden": false,
       "nav": "",
