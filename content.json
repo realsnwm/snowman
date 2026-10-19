@@ -163,15 +163,15 @@
       "cols": "auto",
       "items": [
         {
-          "value": "150M+",
+          "value": "**150M+**",
           "label": "Visits Contributed"
         },
         {
-          "value": "15,000",
+          "value": "**15,000**",
           "label": "Members Moderated"
         },
         {
-          "value": "6,000+",
+          "value": "**6,000+**",
           "label": "Members Managed"
         }
       ],
