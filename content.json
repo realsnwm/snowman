@@ -313,35 +313,6 @@
       "hidden": false,
       "nav": "",
       "type": "notice"
-    },
-    {
-      "eyebrow": "Design",
-      "title": "My *expertise*.",
-      "text": "Describe the work shown.",
-      "note": "Original work. All rights reserved.",
-      "cols": "4",
-      "items": [
-        {
-          "image": "",
-          "caption": ""
-        },
-        {
-          "image": "",
-          "caption": ""
-        },
-        {
-          "image": "",
-          "caption": ""
-        },
-        {
-          "image": "",
-          "caption": ""
-        }
-      ],
-      "id": "bbd0be",
-      "hidden": false,
-      "nav": "",
-      "type": "gallery"
     }
   ]
 }
