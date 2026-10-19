@@ -71,8 +71,8 @@
         "url": "#current"
       },
       "btn2": {
-        "label": "",
-        "url": ""
+        "label": "View Positions\n",
+        "url": "#former"
       },
       "chipOn": "on",
       "chip": {
