@@ -14,8 +14,8 @@
     "hsize": 115,
     "bsize": 100,
     "sg": 100,
-    "spd": 1,
-    "mqs": 40,
+    "spd": 1.2,
+    "mqs": 60,
     "cols": 2
   },
   "custom": {
