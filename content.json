@@ -3,13 +3,13 @@
   "theme": "dark",
   "design": {
     "font": "Outfit",
-    "hfont": "system",
-    "efont": "serif",
+    "hfont": "Poppins",
+    "efont": "Sora",
     "fontC": "",
     "hfontC": "",
     "efontC": "",
     "size": 16,
-    "hscale": 100,
+    "hscale": 130,
     "hweight": 700,
     "head": "tight",
     "radius": 32,
@@ -57,7 +57,7 @@
       "less": "show less",
       "open": "Open",
       "phName": "How should I address you?",
-      "phMsg": "What the project is, and your timeline."
+      "phMsg": "What the project is, your budget, what you're expecting, and your timeline."
     }
   },
   "blocks": [
@@ -193,7 +193,7 @@
       "type": "stats"
     },
     {
-      "label": "Biggest project",
+      "label": "BIGGEST PROJECTS",
       "title": "Kaizen",
       "sub": "QA Tester",
       "text": "Looked for, identified, verified bugs and assisted Developers to ensure a smooth high-quality player experiences.",
@@ -213,6 +213,31 @@
       "sf": "",
       "hide": "never",
       "id": "b5fdm3",
+      "hidden": false,
+      "nav": "",
+      "type": "feature"
+    },
+    {
+      "label": "BIGGEST PROJECTS",
+      "title": "A Bizarre Run",
+      "sub": "QA Tester",
+      "text": "Looked for, identified, verified bugs and assisted Developers to ensure a smooth high-quality player experiences.",
+      "stat": "148K+",
+      "statLabel": "members",
+      "link": "",
+      "align": "left",
+      "size": "m",
+      "pad": "m",
+      "width": "normal",
+      "bgs": "none",
+      "bgc": "",
+      "div": "off",
+      "anim": "default",
+      "delay": 0,
+      "tc": "",
+      "sf": "",
+      "hide": "never",
+      "id": "bd8gi3",
       "hidden": false,
       "nav": "",
       "type": "feature"
