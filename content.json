@@ -593,7 +593,7 @@
         }
       ],
       "fl": {
-        "name": "Name or Discord Username",
+        "name": "Discord Username",
         "need": "What do you need?",
         "hint": "Pick any that apply",
         "msg": "Tell me what you need",
