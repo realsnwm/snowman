@@ -1,9 +1,9 @@
 {
-  "accent": "#0ca170",
+  "accent": "#0bbc81",
   "theme": "dark",
   "design": {
-    "font": "Outfit",
-    "hfont": "Lexend",
+    "font": "system",
+    "hfont": "system",
     "efont": "serif",
     "fontC": "",
     "hfontC": "",
@@ -12,7 +12,7 @@
     "hscale": 115,
     "hweight": 700,
     "head": "tight",
-    "radius": 32,
+    "radius": 16,
     "card": "glass",
     "nav": "pill",
     "width": "normal",
@@ -47,9 +47,6 @@
       "align": "",
       "tt": "capitalize"
     },
-    "hero.text": {
-      "font": ""
-    },
     "bhx5bg.items.0.value": {
       "font": "Fira Code"
     },
@@ -58,6 +55,9 @@
     },
     "bhx5bg.items.2.value": {
       "font": "Fira Code"
+    },
+    "bauq1b.text": {
+      "font": ""
     }
   },
   "seo": {
@@ -68,7 +68,7 @@
     "color": "#00ffaa"
   },
   "integ": {
-    "webhook": "",
+    "webhook": "https://discord.com/api/webhooks/1504874999427633292/Xx1MVXAnU1iSME00z8UyRNcxGFLKgFRvS0vEXx_JeQxum-f96oLadSc_-huE1vAaAgJD",
     "formUrl": "",
     "plausible": ""
   },
@@ -92,10 +92,10 @@
   },
   "blocks": [
     {
-      "chipOn": "on",
+      "chipOn": "off",
       "eyebrow": "SERVER MANAGEMENT · QA TESTING · MODERATION",
       "title": "Hi, I'm *Snowman*.",
-      "text": "A Professional Discord Manager, Moderator & QA Tester.",
+      "text": "A Professional Discord Manager, Moderator & Game Tester.",
       "buttons": [
         {
           "label": "View Positions",
@@ -109,8 +109,8 @@
         }
       ],
       "chip": {
-        "name": "  Snowman",
-        "handle": "@ctmo",
+        "name": " Snowman",
+        "handle": "",
         "status": "",
         "image": ""
       },
@@ -126,7 +126,7 @@
       "tc": "",
       "sf": "",
       "hide": "never",
-      "id": "hero",
+      "id": "bauq1b",
       "hidden": false,
       "nav": "",
       "type": "hero",
@@ -175,7 +175,7 @@
       "tcols": "1",
       "eyebrow": "GET TO KNOW ME BETTER",
       "title": "About *me*",
-      "text": "Hey, welcome to my portfolio! Let me introduce myself. My name's Snowman, I'm a guy, and I've always been curious about Roblox Development since a young age, which led to me being curious about everything around Roblox Games (Management, Development, Moderation, Testing) and more! I've now shifted to Server Managing, Moderation and also QA Testing, but I'm always happy to learn about new things. If you'd ever want to contact me, you can do so by sending me a DM via Discord, because that's where I'm the most active.\n\n- Please note that I am ==For Hire== and ==Open For Work== !",
+      "text": "Hey there, welcome to my Portfolio! Let me introduce myself. My name's Snowman, I'm a guy, and I've always been curious about Roblox Development since a young age, which led to me being curious about everything around Roblox Games (Management, Development, Moderation, Testing, Investing, Acquisition) and more! I've now shifted to Server/Community Managing, Moderation and also Quality Assurance, also called Testing, however I'm always eager to learn about new things. If you'd ever want to contact me, you can do so by sending me a DM via [Discord](https://discord.com/users/1163055480046878720), because that's where I'm the most active.\n\n- Please note that I am currently ==For Hire== and ==Open For Work== !",
       "align": "left",
       "size": "m",
       "pad": "m",
@@ -314,7 +314,7 @@
           "image": ""
         },
         {
-          "eyebrow": "Tester",
+          "eyebrow": "TESTER",
           "title": "Kaizen",
           "text": "160,000+ Members",
           "badge": "Active",
@@ -582,6 +582,7 @@
         "Server Setup",
         "Moderation",
         "Management",
+        "QA Testing",
         "Other inquiries"
       ],
       "rows": [
@@ -616,7 +617,7 @@
       "type": "contact"
     },
     {
-      "text": "© Snowman, All rights reserved.",
+      "text": "© 2026 Snowman, All rights reserved.",
       "align": "left",
       "size": "m",
       "pad": "m",
