@@ -261,7 +261,7 @@
       "link": "",
       "align": "left",
       "size": "m",
-      "pad": "m",
+      "pad": "none",
       "width": "normal",
       "bgs": "none",
       "bgc": "",
