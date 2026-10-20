@@ -476,7 +476,7 @@
         {
           "eyebrow": "\n",
           "title": "Community Management",
-          "text": "Short description.",
+          "text": "Helping communities thrive through meaningful engagement, clear communication, and day-to-day support.",
           "badge": "",
           "stat": "",
           "statLabel": "",
@@ -486,7 +486,7 @@
         {
           "eyebrow": "\n",
           "title": "Server Design",
-          "text": "Short description.",
+          "text": "Building organized, easy-to-navigate Discord servers with custom channels, roles, permissions, and onboarding.",
           "badge": "",
           "stat": "",
           "statLabel": "",
@@ -496,7 +496,7 @@
         {
           "eyebrow": "\n",
           "title": "Staff Organization",
-          "text": "Short description.",
+          "text": "Structuring staff teams with clear roles, responsibilities, and workflows to keep operations running smoothly.",
           "badge": "",
           "stat": "",
           "statLabel": "",
@@ -506,7 +506,7 @@
         {
           "eyebrow": "\n",
           "title": "QA Testing",
-          "text": "Short description.",
+          "text": "Testing games and features to uncover bugs, document issues, and provide actionable feedback before release.",
           "badge": "",
           "stat": "",
           "statLabel": "",
@@ -516,7 +516,37 @@
         {
           "eyebrow": "\n",
           "title": "Server & Game Moderation",
-          "text": "Short description.",
+          "text": "Keeping servers and games welcoming by enforcing rules fairly, resolving conflicts, and responding to reports.",
+          "badge": "",
+          "stat": "",
+          "statLabel": "",
+          "link": "",
+          "image": ""
+        },
+        {
+          "eyebrow": "\n",
+          "title": "Bot Setup & Automation",
+          "text": "Configuring bots for moderation, reaction roles, tickets, and automated tasks to simplify server management.",
+          "badge": "",
+          "stat": "",
+          "statLabel": "",
+          "link": "",
+          "image": ""
+        },
+        {
+          "eyebrow": "\n",
+          "title": "Community Setup",
+          "text": "Preparing new communities for launch with organized spaces, essential systems, and a welcoming member experience.",
+          "badge": "",
+          "stat": "",
+          "statLabel": "",
+          "link": "",
+          "image": ""
+        },
+        {
+          "eyebrow": "\n",
+          "title": "Documentation & Guides",
+          "text": "Writing clear rules, FAQs, staff handbooks, and player guides that make information easy to find.",
           "badge": "",
           "stat": "",
           "statLabel": "",
@@ -526,7 +556,7 @@
       ],
       "align": "center",
       "size": "xl",
-      "pad": "m",
+      "pad": "none",
       "width": "normal",
       "bgs": "panel",
       "bgc": "",
