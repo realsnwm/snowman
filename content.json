@@ -467,10 +467,6 @@
       "type": "cards"
     },
     {
-      "id": "b8nmej",
-      "type": "cards",
-      "hidden": false,
-      "nav": "",
       "layout": "grid",
       "cols": "1",
       "eyebrow": "WHAT I CAN DO",
@@ -479,7 +475,7 @@
       "items": [
         {
           "eyebrow": "\n",
-          "title": "Title",
+          "title": "Community Management",
           "text": "Short description.",
           "badge": "",
           "stat": "",
@@ -489,7 +485,7 @@
         },
         {
           "eyebrow": "\n",
-          "title": "Title",
+          "title": "Server Design",
           "text": "Short description.",
           "badge": "",
           "stat": "",
@@ -499,7 +495,27 @@
         },
         {
           "eyebrow": "\n",
-          "title": "Title",
+          "title": "Staff Organization",
+          "text": "Short description.",
+          "badge": "",
+          "stat": "",
+          "statLabel": "",
+          "link": "",
+          "image": ""
+        },
+        {
+          "eyebrow": "\n",
+          "title": "QA Testing",
+          "text": "Short description.",
+          "badge": "",
+          "stat": "",
+          "statLabel": "",
+          "link": "",
+          "image": ""
+        },
+        {
+          "eyebrow": "\n",
+          "title": "Server & Game Moderation",
           "text": "Short description.",
           "badge": "",
           "stat": "",
@@ -508,18 +524,22 @@
           "image": ""
         }
       ],
-      "align": "left",
-      "size": "m",
+      "align": "center",
+      "size": "xl",
       "pad": "m",
       "width": "normal",
-      "bgs": "none",
+      "bgs": "panel",
       "bgc": "",
-      "div": "off",
+      "div": "on",
       "anim": "default",
       "delay": 0,
       "tc": "",
       "sf": "",
-      "hide": "never"
+      "hide": "never",
+      "id": "b8nmej",
+      "hidden": false,
+      "nav": "",
+      "type": "cards"
     },
     {
       "form": "on",
