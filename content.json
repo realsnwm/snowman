@@ -68,9 +68,9 @@
     "color": "#00ffaa"
   },
   "integ": {
-    "webhook": "https://discord.com/api/webhooks/1504874999427633292/Xx1MVXAnU1iSME00z8UyRNcxGFLKgFRvS0vEXx_JeQxum-f96oLadSc_-huE1vAaAgJD",
-    "formUrl": "",
-    "plausible": ""
+    "webhook": "https://discord.com/api/webhooks/1562233229501800579/uzeBFmid4Q3dth-KPRxvpBBnHf-jpqLIbFHh0dR8iYBtZvKxcQl6jNhIJ1CVvdlL8Hag",
+    "formUrl": "Web3Forms",
+    "plausible": "https://realsnwm.github.io/snowman/"
   },
   "site": {
     "brand": "snowman",
