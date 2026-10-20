@@ -556,7 +556,7 @@
       ],
       "align": "center",
       "size": "xl",
-      "pad": "none",
+      "pad": "s",
       "width": "normal",
       "bgs": "panel",
       "bgc": "",
