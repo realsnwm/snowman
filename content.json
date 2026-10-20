@@ -95,7 +95,7 @@
       "chipOn": "on",
       "eyebrow": "SERVER MANAGEMENT · QA TESTING · MODERATION",
       "title": "Hi, I'm *Snowman*.",
-      "text": "A Professional Community Manager, Moderator & QA Tester.",
+      "text": "A Professional Discord Manager, Moderator & QA Tester.",
       "buttons": [
         {
           "label": "View Positions",
@@ -171,11 +171,11 @@
     },
     {
       "layout": "split",
-      "ratio": "1:1",
+      "ratio": "1:2",
       "tcols": "1",
       "eyebrow": "GET TO KNOW ME BETTER",
       "title": "About *me*",
-      "text": "Hey, welcome to my portfolio! Let me introduce myself. My name's Snowman, I'm a guy, and I've always been curious about Roblox Development since a young age, which led to me being curious about everything around Roblox Games (Management, Development, Moderation, Testing) and more! I've now shifted to Server Managing, Moderation and also QA Testing at some places, but I'm always happy to learn about new things. If you'd ever want to contact me, you can do so by sending me a DM via Discord, because that's where I'm the most active.\n\n==- For Hire!==",
+      "text": "Hey, welcome to my portfolio! Let me introduce myself. My name's Snowman, I'm a guy, and I've always been curious about Roblox Development since a young age, which led to me being curious about everything around Roblox Games (Management, Development, Moderation, Testing) and more! I've now shifted to Server Managing, Moderation and also QA Testing, but I'm always happy to learn about new things. If you'd ever want to contact me, you can do so by sending me a DM via Discord, because that's where I'm the most active.\n\n- Please note that I am ==For Hire== and ==Open For Work== !",
       "align": "left",
       "size": "m",
       "pad": "m",
@@ -475,7 +475,7 @@
       "items": [
         {
           "eyebrow": "\n",
-          "title": "Community Management ☃",
+          "title": "Community Management",
           "text": "Helping communities thrive through meaningful engagement, clear communication, and day-to-day support.",
           "badge": "",
           "stat": "",
