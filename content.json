@@ -188,7 +188,7 @@
       "stats": [],
       "align": "left",
       "size": "s",
-      "pad": "none",
+      "pad": "s",
       "width": "normal",
       "bgs": "none",
       "bgc": "",
