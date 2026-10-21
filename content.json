@@ -256,7 +256,7 @@
       "tcols": "1",
       "eyebrow": "GET TO KNOW ME BETTER",
       "title": "About *me*",
-      "text": "Hey there, welcome to my Portfolio! Let me introduce myself. My name's Snowman, I live in **[France](https://time.is/France)**, I'm a guy and I've always been curious about Roblox Development since a young age, which led to me being curious about everything around Roblox Games (Management, Development, Moderation, Testing, Investing, Acquisition) and more! I've now shifted to Server/Community Managing, Moderation and also Quality Assurance, also called Testing, however I'm always eager to learn about new things. If you'd ever want to contact me, you can do so by sending me a DM via **[Discord](https://discord.com/users/1163055480046878720)**, because that's where I'm the most active.\n\n- Please note that I am currently ==For Hire== and ==Open For Work== !",
+      "text": "Hey, I'm Snowman, a Community Management and QA professional from France with experience across Roblox games and Discord communities.\n\nMy experience ranges from community leadership, staff management, moderation, server operations, to game testing. I've led all aspects of Discord communities while also contributing to QA testing across multiple Roblox projects.\nI value clear communication, organised teams, fair moderation, and thorough testing. I'm always looking for opportunities to take on new responsibilities and help gaming communities and games improve.\n**Currently open to: Community Management, Staff Management, Moderation Lead, and QA Testing/Lead opportunities. **\n\n\nI'm most active on Discord, so feel free to contact me there.",
       "align": "left",
       "size": "m",
       "pad": "m",
@@ -286,7 +286,7 @@
       "items": [
         {
           "value": "150M+",
-          "label": "Total Visits Contributed"
+          "label": "Visits Across Contributed Projects"
         },
         {
           "value": "15,000",
@@ -389,7 +389,7 @@
       "label": "BIGGEST PROJECTS",
       "title": "Anime Crossovers",
       "sub": "Community Manager",
-      "text": "Led all aspects of the Anime Crossovers Discord server, overseeing staff management, moderation, support, quality assurance, event department, server operations, and community management. Held overall responsibility for staff decisions, server organisation, rule enforcement, and day-to-day operations.",
+      "text": "Led all aspects of the Discord server, overseeing staff management, moderation, support, quality assurance, event department, server operations, and community management. Held overall responsibility for staff decisions, server organisation, rule enforcement, and day-to-day operations.",
       "stat": "\n",
       "statLabel": "\n",
       "link": "",
@@ -605,7 +605,7 @@
         {
           "eyebrow": "\n",
           "title": "Community Management",
-          "text": "Engagement, announcements, player support, day-to-day support, and community operations.",
+          "text": "Engagement, announcements, player support, and community operations.",
           "badge": "",
           "stat": "",
           "statLabel": "",
@@ -655,7 +655,7 @@
         {
           "eyebrow": "\n",
           "title": "Documentation",
-          "text": "Writing clear rules, FAQs, staff guides, rules, testing records and process documentation.",
+          "text": "Writing clear rules, FAQs, staff guides, testing records and process documentation.",
           "badge": "",
           "stat": "",
           "statLabel": "",
