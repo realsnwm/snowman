@@ -65,7 +65,7 @@
     "desc": "Snowman - Professional portfolio listing my experience throughout numerous projects, with skills ranging from Management to QA Testing",
     "image": "",
     "favicon": "",
-    "color": "#00ffaa"
+    "color": "#000000"
   },
   "integ": {
     "webhook": "https://discord.com/api/webhooks/1562233229501800579/uzeBFmid4Q3dth-KPRxvpBBnHf-jpqLIbFHh0dR8iYBtZvKxcQl6jNhIJ1CVvdlL8Hag",
