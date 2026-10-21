@@ -57,13 +57,13 @@
       "align": "",
       "tt": "capitalize"
     },
-    "bhx5bg.items.0.value": {
+    "stats.items.0.value": {
       "font": "Fira Code"
     },
-    "bhx5bg.items.1.value": {
+    "stats.items.1.value": {
       "font": "Fira Code"
     },
-    "bhx5bg.items.2.value": {
+    "stats.items.2.value": {
       "font": "Fira Code"
     },
     "bauq1b.text": {
@@ -316,7 +316,7 @@
       "bgiPos": "center",
       "bgiInt": 3,
       "bgiSize": "cover",
-      "id": "bhx5bg",
+      "id": "stats",
       "hidden": false,
       "nav": "Stats",
       "type": "stats"
