@@ -165,10 +165,6 @@
       }
     },
     {
-      "id": "bq2lgg",
-      "type": "profile",
-      "hidden": false,
-      "nav": "",
       "bannerAnim": "fade",
       "bannerDim": "30",
       "bannerSpd": "40",
@@ -208,7 +204,11 @@
       "bgiSpd": 16,
       "bgiPos": "",
       "bgiInt": 3,
-      "bgiSize": "cover"
+      "bgiSize": "cover",
+      "id": "bq2lgg",
+      "hidden": false,
+      "nav": "",
+      "type": "profile"
     },
     {
       "speed": "normal",
@@ -286,15 +286,15 @@
       "items": [
         {
           "value": "150M+",
-          "label": "Visits Contributed"
+          "label": "Total Visits Contributed"
         },
         {
           "value": "15,000",
-          "label": "Members Moderated"
+          "label": "Total Members Moderated"
         },
         {
           "value": "6,000+",
-          "label": "Members Managed"
+          "label": "Total Members Managed"
         }
       ],
       "align": "left",
@@ -325,7 +325,7 @@
       "label": "BIGGEST PROJECTS",
       "title": "Kaizen",
       "sub": "QA Tester",
-      "text": "Looked for, identified, verified bugs and assisted Developers to ensure a smooth high-quality player experiences.",
+      "text": "Tested gameplay and features, investigated suspected bugs, reproduced issues where possible, and communicated findings to help the development team identify problems affecting the player experience.",
       "stat": "160K+",
       "statLabel": "members",
       "link": "",
@@ -357,7 +357,7 @@
       "label": "BIGGEST PROJECTS",
       "title": "A Bizarre Run",
       "sub": "QA Tester",
-      "text": "Looked for, identified, verified bugs and assisted Developers to ensure a smooth high-quality player experiences.",
+      "text": "Evaluated gameplay systems, checked reported issues, and documented bugs and unexpected behaviour to support testing and improve game quality.",
       "stat": "148K+",
       "statLabel": "members",
       "link": "",
@@ -381,6 +381,38 @@
       "bgiInt": 3,
       "bgiSize": "cover",
       "id": "bza6nk",
+      "hidden": false,
+      "nav": "",
+      "type": "feature"
+    },
+    {
+      "label": "BIGGEST PROJECTS",
+      "title": "Anime Crossovers",
+      "sub": "Community Manager",
+      "text": "Led all aspects of the Anime Crossovers Discord server, overseeing staff management, moderation, support, quality assurance, event department, server operations, and community management. Held overall responsibility for staff decisions, server organisation, rule enforcement, and day-to-day operations.",
+      "stat": "\n",
+      "statLabel": "\n",
+      "link": "",
+      "align": "left",
+      "size": "m",
+      "pad": "none",
+      "width": "normal",
+      "bgs": "none",
+      "bgc": "",
+      "div": "off",
+      "anim": "default",
+      "delay": 0,
+      "tc": "",
+      "sf": "",
+      "hide": "never",
+      "bgi": "",
+      "bgiAnim": "none",
+      "bgiDim": 40,
+      "bgiSpd": 16,
+      "bgiPos": "center",
+      "bgiInt": 3,
+      "bgiSize": "cover",
+      "id": "bgzg9j",
       "hidden": false,
       "nav": "",
       "type": "feature"
@@ -498,10 +530,6 @@
       "type": "cards"
     },
     {
-      "id": "b9g7it",
-      "type": "list",
-      "hidden": false,
-      "nav": "",
       "eyebrow": "WHAT I WORKED ON",
       "title": "*Former* experience",
       "text": "",
@@ -561,7 +589,11 @@
       "bgiSpd": 16,
       "bgiPos": "center",
       "bgiInt": 3,
-      "bgiSize": "cover"
+      "bgiSize": "cover",
+      "id": "b9g7it",
+      "hidden": false,
+      "nav": "",
+      "type": "list"
     },
     {
       "layout": "grid",
@@ -574,16 +606,6 @@
           "eyebrow": "\n",
           "title": "Community Management",
           "text": "Helping communities thrive through meaningful engagement, clear communication, and day-to-day support.",
-          "badge": "",
-          "stat": "",
-          "statLabel": "",
-          "link": "",
-          "image": ""
-        },
-        {
-          "eyebrow": "\n",
-          "title": "Design",
-          "text": "Building organized, easy-to-navigate Discord servers with custom channels, roles, permissions, and onboarding.",
           "badge": "",
           "stat": "",
           "statLabel": "",
@@ -612,6 +634,16 @@
         },
         {
           "eyebrow": "\n",
+          "title": "Server & Game Moderation",
+          "text": "Keeping servers and games welcoming by enforcing rules fairly, resolving conflicts, and responding to reports.",
+          "badge": "",
+          "stat": "",
+          "statLabel": "",
+          "link": "",
+          "image": ""
+        },
+        {
+          "eyebrow": "\n",
           "title": "Design",
           "text": "Building organized, easy-to-navigate Discord servers with custom channels, roles, permissions, and onboarding.",
           "badge": "",
@@ -624,16 +656,6 @@
           "eyebrow": "\n",
           "title": "QA Testing",
           "text": "Testing games and features to uncover bugs, document issues, and provide actionable feedback before release.",
-          "badge": "",
-          "stat": "",
-          "statLabel": "",
-          "link": "",
-          "image": ""
-        },
-        {
-          "eyebrow": "\n",
-          "title": "Server & Game Moderation",
-          "text": "Keeping servers and games welcoming by enforcing rules fairly, resolving conflicts, and responding to reports.",
           "badge": "",
           "stat": "",
           "statLabel": "",
