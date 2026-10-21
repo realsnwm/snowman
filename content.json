@@ -605,7 +605,17 @@
         {
           "eyebrow": "\n",
           "title": "Community Management",
-          "text": "Helping communities thrive through meaningful engagement, clear communication, and day-to-day support.",
+          "text": "Engagement, announcements, player support, day-to-day support, and community operations.",
+          "badge": "",
+          "stat": "",
+          "statLabel": "",
+          "link": "",
+          "image": ""
+        },
+        {
+          "eyebrow": "\n",
+          "title": "Staff Leadership",
+          "text": "Structuring and coordinating staff teams with clear roles, responsibilities, and workflows to keep internal operations running smoothly.",
           "badge": "",
           "stat": "",
           "statLabel": "",
@@ -615,7 +625,7 @@
         {
           "eyebrow": "\n",
           "title": "Server Operations",
-          "text": "Overseeing daily server activities, resolved issues, and maintaining an organized environment.",
+          "text": "Community setup, Discord structure, roles, permissions, bots and automation.",
           "badge": "",
           "stat": "",
           "statLabel": "",
@@ -624,8 +634,8 @@
         },
         {
           "eyebrow": "\n",
-          "title": "Staff Organization",
-          "text": "Structuring staff teams with clear roles, responsibilities, and workflows to keep operations running smoothly.",
+          "title": "Moderation & Policy",
+          "text": "Report handling, rule enforcement, escalation and fair decisions.",
           "badge": "",
           "stat": "",
           "statLabel": "",
@@ -634,8 +644,8 @@
         },
         {
           "eyebrow": "\n",
-          "title": "Server & Game Moderation",
-          "text": "Keeping servers and games welcoming by enforcing rules fairly, resolving conflicts, and responding to reports.",
+          "title": "QA & Bug Reporting",
+          "text": "Playtesting, reproducing issues, test cases and clear reports.",
           "badge": "",
           "stat": "",
           "statLabel": "",
@@ -644,48 +654,8 @@
         },
         {
           "eyebrow": "\n",
-          "title": "Design",
-          "text": "Building organized, easy-to-navigate Discord servers with custom channels, roles, permissions, and onboarding.",
-          "badge": "",
-          "stat": "",
-          "statLabel": "",
-          "link": "",
-          "image": ""
-        },
-        {
-          "eyebrow": "\n",
-          "title": "QA Testing",
-          "text": "Testing games and features to uncover bugs, document issues, and provide actionable feedback before release.",
-          "badge": "",
-          "stat": "",
-          "statLabel": "",
-          "link": "",
-          "image": ""
-        },
-        {
-          "eyebrow": "\n",
-          "title": "Bot Setup & Automation",
-          "text": "Configuring bots for moderation, reaction roles, tickets, and automated tasks to simplify server management.",
-          "badge": "",
-          "stat": "",
-          "statLabel": "",
-          "link": "",
-          "image": ""
-        },
-        {
-          "eyebrow": "\n",
-          "title": "Community Setup",
-          "text": "Preparing new communities for launch with organized spaces, essential systems, and a welcoming member experience.",
-          "badge": "",
-          "stat": "",
-          "statLabel": "",
-          "link": "",
-          "image": ""
-        },
-        {
-          "eyebrow": "\n",
-          "title": "Documentation & Guides",
-          "text": "Writing clear rules, FAQs, staff handbooks, and player guides that make information easy to find.",
+          "title": "Documentation",
+          "text": "Writing clear rules, FAQs, staff guides, rules, testing records and process documentation.",
           "badge": "",
           "stat": "",
           "statLabel": "",
