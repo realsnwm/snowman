@@ -9,7 +9,7 @@
     "hfontC": "",
     "efontC": "",
     "size": 16,
-    "hscale": 115,
+    "hscale": 95,
     "hweight": 700,
     "head": "tight",
     "radius": 16,
@@ -36,12 +36,12 @@
     "hover": "lift",
     "spot": true,
     "cursor": true,
-    "ambient": false,
+    "ambient": true,
     "loader": true,
     "loaderStyle": "orb",
-    "loaderSpd": 1,
+    "loaderSpd": 0.5,
     "smooth": true,
-    "progress": true,
+    "progress": false,
     "sticky": true,
     "themeBtn": true,
     "css": "",
@@ -114,18 +114,18 @@
   "blocks": [
     {
       "chipOn": "off",
-      "eyebrow": "SERVER MANAGEMENT · QA TESTING · MODERATION",
-      "title": "Hi, I'm *Snowman*.",
-      "text": "A Professional Discord Manager, Moderator & Game Tester.\n",
+      "eyebrow": "COMMUNITY OPERATIONS · STAFF LEADERSHIP · MODERATION · QA TESTING",
+      "title": "Building ==better communities,== \n*better games.*",
+      "text": "I help Roblox game teams and Discord communities build organised staff systems, handle player issues fairly, and improve game quality through structured testing and actionable player feedback.",
       "buttons": [
         {
-          "label": "View Positions",
+          "label": "View Projects",
           "url": "#current",
           "style": "ghost"
         },
         {
-          "label": "View Experience",
-          "url": "#former",
+          "label": "Contact Me",
+          "url": "#contact",
           "style": "ghost"
         }
       ],
@@ -138,13 +138,13 @@
       "align": "left",
       "size": "m",
       "pad": "m",
-      "width": "normal",
+      "width": "full",
       "bgs": "none",
       "bgc": "",
       "div": "off",
       "anim": "default",
       "delay": 0,
-      "tc": "",
+      "tc": "#ffffff",
       "sf": "",
       "hide": "never",
       "bgi": "",
@@ -169,26 +169,26 @@
       "type": "profile",
       "hidden": false,
       "nav": "",
-      "bannerAnim": "zoom",
-      "bannerDim": "10",
-      "bannerSpd": "8",
+      "bannerAnim": "fade",
+      "bannerDim": "30",
+      "bannerSpd": "40",
       "bannerPos": "center",
-      "bannerInt": "1",
-      "bannerSize": "auto",
-      "bannerDir": "alternate",
-      "banner": "assets/8a05dd24b35e9b2ece1a.jpg",
+      "bannerInt": "5",
+      "bannerSize": "contain",
+      "bannerDir": "reverse",
+      "banner": "https://tr.rbxcdn.com/30DAY-Avatar-C413A456C36F06464C0EAF01F5A350BE-Png/720/720/Avatar/Webp/noFilter",
       "name": "Snowman",
-      "handle": "@ctmo",
-      "bio": "One or two lines about you.",
+      "handle": "@Snowmanlegocity129",
+      "bio": "The Original One, Snowman!",
       "badges": [
-        "QA Tester",
         "Community Manager",
-        "Moderator"
+        "Moderator",
+        "QA Tester"
       ],
       "loc": "France, UTC+2",
       "tz": "Europe/Paris",
-      "status": "Open to work",
-      "avatar": "assets/aa59ee487230901a1aa6.jpg",
+      "status": "Available to work",
+      "avatar": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-C413A456C36F06464C0EAF01F5A350BE-Png-Background/150/150/AvatarHeadshot/Webp/noFilter",
       "stats": [],
       "align": "left",
       "size": "m",
@@ -498,71 +498,49 @@
       "type": "cards"
     },
     {
-      "layout": "numbered",
-      "cols": "1",
+      "id": "b9g7it",
+      "type": "list",
+      "hidden": false,
+      "nav": "",
       "eyebrow": "WHAT I WORKED ON",
-      "title": "*Former* positions",
+      "title": "*Former* experience",
       "text": "",
       "items": [
         {
-          "eyebrow": "Tester",
           "title": "Beast Clicker",
-          "text": "Tester",
-          "badge": "Retired",
-          "stat": "",
-          "statLabel": "",
-          "link": "",
-          "image": ""
+          "sub": "Tester",
+          "text": "Tested gameplay features, identified bugs and glitches, and provided feedback to help improve game functionality and the overall player experience.",
+          "badge": "Retired"
         },
         {
-          "eyebrow": "Tester",
           "title": "Adopt A Brainrot",
-          "text": "Tester",
-          "badge": "Retired",
-          "stat": "",
-          "statLabel": "",
-          "link": "",
-          "image": ""
+          "sub": "Tester",
+          "text": "Tested game mechanics, progression systems, and gameplay features while identifying bugs and reporting issues to help improve game quality.",
+          "badge": "Retired"
         },
         {
-          "eyebrow": "Tester",
           "title": "Cut Trees For Brainrots",
-          "text": "Tester",
-          "badge": "Retired",
-          "stat": "",
-          "statLabel": "",
-          "link": "",
-          "image": ""
+          "sub": "Tester",
+          "text": "Tested gameplay systems, combat mechanics, and updates, reported bugs, and provided feedback to help ensure a smooth and enjoyable player experience.",
+          "badge": "Retired"
         },
         {
-          "eyebrow": "Tester",
           "title": "Anime Invasion",
-          "text": "Tester",
-          "badge": "Retired",
-          "stat": "",
-          "statLabel": "",
-          "link": "",
-          "image": ""
+          "sub": "Tester",
+          "text": "Participated in gameplay testing, evaluated new content and features, reproduced reported issues, and communicated findings to the development team. Helped ensure updates worked as intended before release.",
+          "badge": "Retired"
         },
         {
-          "eyebrow": "Trial Moderator",
           "title": "Last Stop",
-          "text": "Trial Moderator",
-          "badge": "Retired",
-          "stat": "",
-          "statLabel": "",
-          "link": "",
-          "image": ""
+          "sub": "Trial Moderator",
+          "text": "Assisted with trial moderation by monitoring player behavior, helping enforce game rules, and supporting a fair and welcoming community.",
+          "badge": "Retired"
         },
         {
-          "eyebrow": "Server Manager",
           "title": "Other Servers",
-          "text": "Server Manager",
-          "badge": "Retired",
-          "stat": "",
-          "statLabel": "",
-          "link": "",
-          "image": ""
+          "sub": "Server Manager",
+          "text": "Managed server operations and community activities, assisted staff members, handled player concerns, and helped enforce server rules. Supported moderation, maintained organization, and contributed to creating a welcoming and well-managed community.",
+          "badge": "Retired"
         }
       ],
       "align": "left",
@@ -583,11 +561,7 @@
       "bgiSpd": 16,
       "bgiPos": "center",
       "bgiInt": 3,
-      "bgiSize": "cover",
-      "id": "former",
-      "hidden": false,
-      "nav": "Former Positions",
-      "type": "cards"
+      "bgiSize": "cover"
     },
     {
       "layout": "grid",
@@ -608,8 +582,18 @@
         },
         {
           "eyebrow": "\n",
-          "title": "Server Design",
+          "title": "Design",
           "text": "Building organized, easy-to-navigate Discord servers with custom channels, roles, permissions, and onboarding.",
+          "badge": "",
+          "stat": "",
+          "statLabel": "",
+          "link": "",
+          "image": ""
+        },
+        {
+          "eyebrow": "\n",
+          "title": "Server Operations",
+          "text": "Overseeing daily server activities, resolved issues, and maintaining an organized environment.",
           "badge": "",
           "stat": "",
           "statLabel": "",
@@ -620,6 +604,16 @@
           "eyebrow": "\n",
           "title": "Staff Organization",
           "text": "Structuring staff teams with clear roles, responsibilities, and workflows to keep operations running smoothly.",
+          "badge": "",
+          "stat": "",
+          "statLabel": "",
+          "link": "",
+          "image": ""
+        },
+        {
+          "eyebrow": "\n",
+          "title": "Design",
+          "text": "Building organized, easy-to-navigate Discord servers with custom channels, roles, permissions, and onboarding.",
           "badge": "",
           "stat": "",
           "statLabel": "",
@@ -696,7 +690,7 @@
       "bgiPos": "center",
       "bgiInt": 3,
       "bgiSize": "cover",
-      "id": "b8nmej",
+      "id": "skills",
       "hidden": false,
       "nav": "Skills",
       "type": "cards"
