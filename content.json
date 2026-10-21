@@ -121,7 +121,7 @@
         {
           "label": "View Positions",
           "url": "#current",
-          "style": "solid"
+          "style": "ghost"
         },
         {
           "label": "View Experience",
@@ -163,6 +163,52 @@
         "an": "fade",
         "ad": 1
       }
+    },
+    {
+      "id": "bq2lgg",
+      "type": "profile",
+      "hidden": false,
+      "nav": "",
+      "bannerAnim": "zoom",
+      "bannerDim": "10",
+      "bannerSpd": "8",
+      "bannerPos": "center",
+      "bannerInt": "1",
+      "bannerSize": "auto",
+      "bannerDir": "alternate",
+      "banner": "assets/8a05dd24b35e9b2ece1a.jpg",
+      "name": "Snowman",
+      "handle": "@ctmo",
+      "bio": "One or two lines about you.",
+      "badges": [
+        "QA Tester",
+        "Community Manager",
+        "Moderator"
+      ],
+      "loc": "France, UTC+2",
+      "tz": "Europe/Paris",
+      "status": "Open to work",
+      "avatar": "assets/aa59ee487230901a1aa6.jpg",
+      "stats": [],
+      "align": "left",
+      "size": "m",
+      "pad": "m",
+      "width": "normal",
+      "bgs": "none",
+      "bgc": "",
+      "div": "off",
+      "anim": "default",
+      "delay": 0,
+      "tc": "",
+      "sf": "",
+      "hide": "never",
+      "bgi": "",
+      "bgiAnim": "none",
+      "bgiDim": 40,
+      "bgiSpd": 16,
+      "bgiPos": "",
+      "bgiInt": 3,
+      "bgiSize": "cover"
     },
     {
       "speed": "normal",
