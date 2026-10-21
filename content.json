@@ -526,12 +526,12 @@
       "bgiSize": "cover",
       "id": "current",
       "hidden": false,
-      "nav": "Current Positions",
+      "nav": "Experience",
       "type": "cards"
     },
     {
       "eyebrow": "WHAT I WORKED ON",
-      "title": "*Former* experience",
+      "title": "*Former* positions",
       "text": "",
       "items": [
         {
@@ -592,7 +592,7 @@
       "bgiSize": "cover",
       "id": "b9g7it",
       "hidden": false,
-      "nav": "Former Positions",
+      "nav": "",
       "type": "list"
     },
     {
