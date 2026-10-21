@@ -62,18 +62,18 @@
   },
   "seo": {
     "title": "Snowman's Portfolio",
-    "desc": "Professional portfolio listing my experience throughout numerous projects. Made my myself.",
+    "desc": "Snowman - Professional portfolio listing my experience throughout numerous projects, with skills ranging from Management to QA Testing",
     "image": "",
     "favicon": "",
     "color": "#00ffaa"
   },
   "integ": {
     "webhook": "https://discord.com/api/webhooks/1562233229501800579/uzeBFmid4Q3dth-KPRxvpBBnHf-jpqLIbFHh0dR8iYBtZvKxcQl6jNhIJ1CVvdlL8Hag",
-    "formUrl": "Web3Forms",
+    "formUrl": "",
     "plausible": "https://realsnwm.github.io/snowman/"
   },
   "site": {
-    "brand": "snowman",
+    "brand": "snowman.",
     "footer": "",
     "title": "",
     "desc": "",
@@ -469,8 +469,8 @@
     {
       "layout": "grid",
       "cols": "1",
-      "eyebrow": "WHAT I OFFER",
-      "title": "Services",
+      "eyebrow": "WHAT I CAN DO",
+      "title": "Skills",
       "text": "",
       "items": [
         {
@@ -568,14 +568,14 @@
       "hide": "never",
       "id": "b8nmej",
       "hidden": false,
-      "nav": "Services",
+      "nav": "Skills",
       "type": "cards"
     },
     {
       "form": "on",
       "ratio": "1:1",
       "eyebrow": "Contact",
-      "title": "Want us to work *together*?",
+      "title": "Want to work *together*? Here's what I can *offer*.",
       "text": "Send me a project request or message me directly (preferred).",
       "email": "realsnowman00@gmail.com",
       "options": [
