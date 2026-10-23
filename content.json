@@ -698,6 +698,44 @@
       "type": "cards"
     },
     {
+      "id": "bb1buu",
+      "type": "testimonials",
+      "hidden": false,
+      "nav": "",
+      "cols": "1",
+      "eyebrow": "Reviews",
+      "title": "Track record",
+      "text": "",
+      "items": [
+        {
+          "quote": "==“ Beautiful ”==",
+          "name": "🎃SPOOKY NOEL🎃\n(@cursedualkatanacdk)\n",
+          "role": "Server Redesign",
+          "stars": "5",
+          "avatar": "https://cdn.discordapp.com/avatars/1212554274576400394/764a206900c1f78d8eea0ca4776c26c5.webp?size=1536"
+        }
+      ],
+      "align": "left",
+      "size": "m",
+      "pad": "m",
+      "width": "normal",
+      "bgs": "none",
+      "bgc": "",
+      "div": "off",
+      "anim": "default",
+      "delay": 0,
+      "tc": "",
+      "sf": "",
+      "hide": "never",
+      "bgi": "",
+      "bgiAnim": "none",
+      "bgiDim": 40,
+      "bgiSpd": 16,
+      "bgiPos": "center",
+      "bgiInt": 3,
+      "bgiSize": "cover"
+    },
+    {
       "form": "on",
       "ratio": "1:1",
       "eyebrow": "Contact",
@@ -705,10 +743,11 @@
       "text": "Send me a project request or message me directly (preferred).",
       "email": "realsnowman00@gmail.com",
       "options": [
-        "Server Setup",
-        "Moderation",
         "Management",
+        "Moderation",
         "QA Testing",
+        "Server Setup",
+        "Server (Re)Design",
         "Other inquiries"
       ],
       "rows": [
